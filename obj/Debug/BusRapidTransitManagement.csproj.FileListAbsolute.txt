@@ -1,0 +1,10 @@
+S:\Git\BusRapidTransitManagement\bin\Debug\BusRapidTransitManagement.exe.config
+S:\Git\BusRapidTransitManagement\bin\Debug\BusRapidTransitManagement.exe
+S:\Git\BusRapidTransitManagement\bin\Debug\BusRapidTransitManagement.pdb
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.csproj.AssemblyReference.cache
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Properties.Resources.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.csproj.GenerateResource.cache
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.csproj.CoreCompileInputs.cache
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.exe
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.pdb
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Login.resources

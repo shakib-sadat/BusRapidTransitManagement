@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BusRapidTransitManagement
 {
-    public partial class Form1 : Form
+    public partial class StuffInterface : Form
     {
-        public Form1()
+        public StuffInterface()
         {
             InitializeComponent();
         }
