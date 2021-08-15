@@ -42,6 +42,7 @@ namespace BusRapidTransitManagement.Forms
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+            
         }
 
         private void ManagerLoginbutton_Click(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace BusRapidTransitManagement.Forms
                 }
                 else
                 {
-                    if (StuffUsertextBox.Text == "shakib007" && StuffPasswordtextBox.Text == "1234")
+                    if (StuffUsertextBox.Text == "111" && StuffPasswordtextBox.Text == "111")
                     {
                         MessageBox.Show("Logged in as a Stuff");
                         StuffInterface stuffinterface = new StuffInterface();
@@ -75,7 +76,12 @@ namespace BusRapidTransitManagement.Forms
 
                 }
             }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
+    }
     }
 
 

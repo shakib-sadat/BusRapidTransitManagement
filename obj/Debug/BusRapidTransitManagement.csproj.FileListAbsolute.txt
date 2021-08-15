@@ -9,3 +9,5 @@ S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.exe
 S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.pdb
 S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.Login.resources
 S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.StuffInterface.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.Ticketshow_Stuff_.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.BusInfoshow_Stuff_.resources

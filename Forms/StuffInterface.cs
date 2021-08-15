@@ -27,5 +27,30 @@ namespace BusRapidTransitManagement.Forms
         {
             
         }
+
+        private void Ticketbutton_Click(object sender, EventArgs e)
+        {
+            TicketBookpanel.Controls.Add(new Ticketshow_Stuff_());
+        }
+
+        private void StuffLogoutbutton_Click(object sender, EventArgs e)
+        {
+            
+           MessageBox.Show("User Logged Out");
+           //Login login = new Login();
+           //login.Show();
+           //this.Hide();
+           this.Close();
+        }
+
+        private void StuffInterface_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BusInformationbutton_Click(object sender, EventArgs e)
+        {
+            BusInfopanel.Controls.Add(new BusInfoshow_Stuff_()  );
+        }
     }
 }

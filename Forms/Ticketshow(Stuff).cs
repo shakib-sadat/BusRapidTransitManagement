@@ -15,16 +15,30 @@ namespace BusRapidTransitManagement.Forms
         public Ticketshow_Stuff_()
         {
             InitializeComponent();
+            BookTicketpanel.Visible = false;
+            CancelTicketpanel.Visible = false;
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
+       
+
+        
+        private void DepartureTimelabel_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox9_TextChanged(object sender, EventArgs e)
+        private void BookTicketbutton_Click(object sender, EventArgs e)
         {
+            CancelTicketpanel.Visible = false;
+            BookTicketpanel.Visible = true;
+            
+        }
 
+        private void CancelTicketbutton_Click(object sender, EventArgs e)
+        {
+            //BookTicketpanel.Visible = false;
+            CancelTicketpanel.Visible = true;
+            
         }
     }
 }

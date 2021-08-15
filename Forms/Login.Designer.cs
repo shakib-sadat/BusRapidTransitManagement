@@ -212,6 +212,7 @@ namespace BusRapidTransitManagement.Forms
             this.Name = "Login";
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.StuffLoginpanel.ResumeLayout(false);
             this.StuffLoginpanel.PerformLayout();
             this.ManagerLoginpanel.ResumeLayout(false);
