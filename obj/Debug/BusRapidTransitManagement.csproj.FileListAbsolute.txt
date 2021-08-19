@@ -10,4 +10,9 @@ S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.pdb
 S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.Login.resources
 S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.StuffInterface.resources
 S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.Ticketshow_Stuff_.resources
-S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.BusInfoshow_Stuff_.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.BusInfo_stuff_.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.PassengerInfo_stuff_.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.Counters_stuff_.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.StuffEditInfo.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.ManagerInterface.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.StuffInfoControl_manager_.resources

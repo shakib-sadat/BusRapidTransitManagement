@@ -47,8 +47,31 @@ namespace BusRapidTransitManagement.Forms
 
         private void ManagerLoginbutton_Click(object sender, EventArgs e)
         {
+          if(ManagerUsertextBox.Text == "")
+            {
+                MessageBox.Show("Enter an user ID");
+            }
+          else if(ManagerPasswordtextBox.Text == "")
+            {
+                MessageBox.Show("Enter password");
+            }
+          else
+            {
+                if (ManagerUsertextBox.Text == "222" && ManagerPasswordtextBox.Text == "222")
+                {
+                    MessageBox.Show("Logged in as a Manager");
+                    ManagerInterface managerInterface = new ManagerInterface();
+                    managerInterface.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Enter valid User Id and Password");
+                }
 
+            }
         }
+        
 
         private void StuffLoginbutton_Click(object sender, EventArgs e)
         {
@@ -80,6 +103,16 @@ namespace BusRapidTransitManagement.Forms
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManagerUsertextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

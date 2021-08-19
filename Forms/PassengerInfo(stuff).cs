@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace BusRapidTransitManagement.Forms
 {
-    public partial class BusInfoshow_Stuff_ : UserControl
+    public partial class PassengerInfo_stuff_ : UserControl
     {
-        public BusInfoshow_Stuff_()
+        public PassengerInfo_stuff_()
         {
             InitializeComponent();
         }
+
+        
     }
 }

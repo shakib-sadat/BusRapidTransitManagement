@@ -40,5 +40,15 @@ namespace BusRapidTransitManagement.Forms
             CancelTicketpanel.Visible = true;
             
         }
+
+        private void CancelTicketpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

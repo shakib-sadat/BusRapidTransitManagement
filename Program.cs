@@ -17,6 +17,8 @@ namespace BusRapidTransitManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Forms.Login());
+            //Application.Run(new Forms.StuffInterface());
+            //Application.Run(new Forms.ManagerInterface());
         }
     }
 }
