@@ -36,7 +36,7 @@ namespace BusRapidTransitManagement.Forms
             // Busshowlabel
             // 
             this.Busshowlabel.AutoSize = true;
-            this.Busshowlabel.Location = new System.Drawing.Point(126, 178);
+            this.Busshowlabel.Location = new System.Drawing.Point(70, 178);
             this.Busshowlabel.Name = "Busshowlabel";
             this.Busshowlabel.Size = new System.Drawing.Size(49, 13);
             this.Busshowlabel.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace BusRapidTransitManagement.Forms
             this.BusshowcomboBox.Items.AddRange(new object[] {
             "Available Seats",
             "Destinations"});
-            this.BusshowcomboBox.Location = new System.Drawing.Point(221, 170);
+            this.BusshowcomboBox.Location = new System.Drawing.Point(206, 170);
             this.BusshowcomboBox.Name = "BusshowcomboBox";
             this.BusshowcomboBox.Size = new System.Drawing.Size(121, 21);
             this.BusshowcomboBox.TabIndex = 1;

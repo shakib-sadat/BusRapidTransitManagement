@@ -153,9 +153,9 @@ namespace BusRapidTransitManagement.Forms
             // 
             // stuffhomepanel
             // 
-            this.stuffhomepanel.Location = new System.Drawing.Point(197, 115);
+            this.stuffhomepanel.Location = new System.Drawing.Point(197, 309);
             this.stuffhomepanel.Name = "stuffhomepanel";
-            this.stuffhomepanel.Size = new System.Drawing.Size(1159, 571);
+            this.stuffhomepanel.Size = new System.Drawing.Size(1159, 377);
             this.stuffhomepanel.TabIndex = 2;
             this.stuffhomepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.stuffhomepanel_Paint);
             // 
@@ -171,7 +171,6 @@ namespace BusRapidTransitManagement.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StuffInterface";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StuffInterface_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StuffInterface_FormClosed);
             this.Load += new System.EventHandler(this.StuffInterface_Load);
             this.StuffIHomepagepanel.ResumeLayout(false);
             this.StuffIHomepagepanel.PerformLayout();

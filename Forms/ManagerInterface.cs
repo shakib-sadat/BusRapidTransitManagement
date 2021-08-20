@@ -26,5 +26,24 @@ namespace BusRapidTransitManagement.Forms
         {
             Managerhomepanel.Controls.Add(new StuffInfoControl_manager_());
         }
+
+        private void managerLogoutbutton_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void ManagerTicketbutton_Click(object sender, EventArgs e)
+        {
+            Managerhomepanel.Controls.Clear();
+            Managerhomepanel.Controls.Add(new Ticketshow_Manager_());
+        }
+
+        private void managerBusInformationbutton_Click(object sender, EventArgs e)
+        {
+            Managerhomepanel.Controls.Clear();
+            Managerhomepanel.Controls.Add(new BusInfo_Manager_());
+        }
     }
 }

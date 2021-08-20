@@ -17,13 +17,7 @@ namespace BusRapidTransitManagement.Forms
             InitializeComponent();
         }
 
-        private void StuffInterface_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //Login login = new Login();
-            //login.Show();
-            Application.Exit();
-            
-        }
+        
 
         private void StuffInterface_Load(object sender, EventArgs e)
         {
@@ -36,21 +30,9 @@ namespace BusRapidTransitManagement.Forms
             stuffhomepanel.Controls.Add(new Ticketshow_Stuff_());
         }
 
-        private void StuffLogoutbutton_Click(object sender, EventArgs e)
-        {
-            
-           //MessageBox.Show("User Logged Out");
-           //Login login = new Login();
-           //login.Show();
-           //this.Hide();
-           this.Close();
-           
-        }
+        
 
-        private void StuffInterface_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void ticketshow_Stuff_1_Load(object sender, EventArgs e)
         {
@@ -100,6 +82,22 @@ namespace BusRapidTransitManagement.Forms
         private void StuffIHomepagepanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void StuffLogoutbutton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Logged Out");
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void StuffInterface_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            /*Login login = new Login();
+            login.Show();
+            this.Hide();*/
+            Application.Exit();
         }
     }
 }

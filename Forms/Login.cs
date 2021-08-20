@@ -63,6 +63,7 @@ namespace BusRapidTransitManagement.Forms
                     ManagerInterface managerInterface = new ManagerInterface();
                     managerInterface.Show();
                     this.Hide();
+                    //this.Close();
                 }
                 else
                 {
@@ -91,7 +92,8 @@ namespace BusRapidTransitManagement.Forms
                         StuffInterface stuffinterface = new StuffInterface();
                         stuffinterface.Show();
                         this.Hide();
-                    }
+                        //this.Close();
+                }
                     else
                     {
                         MessageBox.Show("Enter valid User Id and Password");

@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,9 +49,15 @@
   <ItemGroup>
     <Compile Include="Classes\Bus.cs" />
     <Compile Include="Classes\Destination.cs" />
-    <Compile Include="Classes\Emplyoee.cs" />
     <Compile Include="Classes\Manager.cs" />
     <Compile Include="Classes\Passenger.cs" />
+    <Compile Include="Data Access\DataAccess.cs" />
+    <Compile Include="Forms\BusInfo%28Manager%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\BusInfo%28Manager%29.Designer.cs">
+      <DependentUpon>BusInfo%28Manager%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BusInfo%28stuff%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +106,12 @@
     <Compile Include="Forms\StuffInterface.Designer.cs">
       <DependentUpon>StuffInterface.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Ticketshow%28Manager%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Ticketshow%28Manager%29.Designer.cs">
+      <DependentUpon>Ticketshow%28Manager%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Ticketshow%28Stuff%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +122,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Stuff.cs" />
     <Compile Include="Classes\Ticket.cs" />
+    <EmbeddedResource Include="Forms\BusInfo%28Manager%29.resx">
+      <DependentUpon>BusInfo%28Manager%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\BusInfo%28stuff%29.resx">
       <DependentUpon>BusInfo%28stuff%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StuffInterface.resx">
       <DependentUpon>StuffInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ticketshow%28Manager%29.resx">
+      <DependentUpon>Ticketshow%28Manager%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ticketshow%28Stuff%29.resx">
       <DependentUpon>Ticketshow%28Stuff%29.cs</DependentUpon>
