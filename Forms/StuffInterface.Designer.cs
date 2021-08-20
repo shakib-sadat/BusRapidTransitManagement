@@ -72,7 +72,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.Countersbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(105)))), ((int)(((byte)(122)))));
             this.Countersbutton.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Countersbutton.Location = new System.Drawing.Point(848, 27);
+            this.Countersbutton.Location = new System.Drawing.Point(1087, 27);
             this.Countersbutton.Name = "Countersbutton";
             this.Countersbutton.Size = new System.Drawing.Size(132, 42);
             this.Countersbutton.TabIndex = 8;
@@ -84,7 +84,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.PassengerInfobutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(105)))), ((int)(((byte)(122)))));
             this.PassengerInfobutton.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassengerInfobutton.Location = new System.Drawing.Point(640, 27);
+            this.PassengerInfobutton.Location = new System.Drawing.Point(821, 27);
             this.PassengerInfobutton.Name = "PassengerInfobutton";
             this.PassengerInfobutton.Size = new System.Drawing.Size(129, 42);
             this.PassengerInfobutton.TabIndex = 7;
@@ -96,7 +96,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.BusInformationbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(105)))), ((int)(((byte)(122)))));
             this.BusInformationbutton.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BusInformationbutton.Location = new System.Drawing.Point(458, 27);
+            this.BusInformationbutton.Location = new System.Drawing.Point(579, 27);
             this.BusInformationbutton.Name = "BusInformationbutton";
             this.BusInformationbutton.Size = new System.Drawing.Size(128, 42);
             this.BusInformationbutton.TabIndex = 6;
@@ -108,7 +108,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.Ticketbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(105)))), ((int)(((byte)(122)))));
             this.Ticketbutton.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ticketbutton.Location = new System.Drawing.Point(273, 27);
+            this.Ticketbutton.Location = new System.Drawing.Point(333, 27);
             this.Ticketbutton.Name = "Ticketbutton";
             this.Ticketbutton.Size = new System.Drawing.Size(127, 42);
             this.Ticketbutton.TabIndex = 5;
@@ -120,7 +120,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.StuffLogoutbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.StuffLogoutbutton.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StuffLogoutbutton.Location = new System.Drawing.Point(41, 372);
+            this.StuffLogoutbutton.Location = new System.Drawing.Point(41, 313);
             this.StuffLogoutbutton.Name = "StuffLogoutbutton";
             this.StuffLogoutbutton.Size = new System.Drawing.Size(116, 43);
             this.StuffLogoutbutton.TabIndex = 6;
@@ -143,7 +143,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.StuffEditinfobutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(109)))));
             this.StuffEditinfobutton.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StuffEditinfobutton.Location = new System.Drawing.Point(41, 201);
+            this.StuffEditinfobutton.Location = new System.Drawing.Point(41, 127);
             this.StuffEditinfobutton.Name = "StuffEditinfobutton";
             this.StuffEditinfobutton.Size = new System.Drawing.Size(116, 42);
             this.StuffEditinfobutton.TabIndex = 7;
@@ -153,9 +153,9 @@ namespace BusRapidTransitManagement.Forms
             // 
             // stuffhomepanel
             // 
-            this.stuffhomepanel.Location = new System.Drawing.Point(197, 309);
+            this.stuffhomepanel.Location = new System.Drawing.Point(206, 122);
             this.stuffhomepanel.Name = "stuffhomepanel";
-            this.stuffhomepanel.Size = new System.Drawing.Size(1159, 377);
+            this.stuffhomepanel.Size = new System.Drawing.Size(1139, 552);
             this.stuffhomepanel.TabIndex = 2;
             this.stuffhomepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.stuffhomepanel_Paint);
             // 

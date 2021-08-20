@@ -34,6 +34,8 @@ namespace BusRapidTransitManagement.Forms
             this.BookTicketbutton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BookTicketpanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.CancelTicketpanel = new System.Windows.Forms.Panel();
             this.CancelTicketIdlabel = new System.Windows.Forms.Label();
             this.ConfirmCancelbutton = new System.Windows.Forms.Button();
@@ -60,8 +62,6 @@ namespace BusRapidTransitManagement.Forms
             this.ContactNolabel = new System.Windows.Forms.Label();
             this.Fromlabel = new System.Windows.Forms.Label();
             this.PassengerNamelabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.Ticketbookingpanel.SuspendLayout();
             this.BookTicketpanel.SuspendLayout();
             this.CancelTicketpanel.SuspendLayout();
@@ -72,10 +72,9 @@ namespace BusRapidTransitManagement.Forms
             this.Ticketbookingpanel.BackColor = System.Drawing.Color.Khaki;
             this.Ticketbookingpanel.Controls.Add(this.CancelTicketbutton);
             this.Ticketbookingpanel.Controls.Add(this.BookTicketbutton);
-            this.Ticketbookingpanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Ticketbookingpanel.Location = new System.Drawing.Point(0, 0);
+            this.Ticketbookingpanel.Location = new System.Drawing.Point(3, 0);
             this.Ticketbookingpanel.Name = "Ticketbookingpanel";
-            this.Ticketbookingpanel.Size = new System.Drawing.Size(204, 533);
+            this.Ticketbookingpanel.Size = new System.Drawing.Size(204, 552);
             this.Ticketbookingpanel.TabIndex = 10;
             // 
             // CancelTicketbutton
@@ -106,18 +105,18 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.panel1.BackColor = System.Drawing.Color.LemonChiffon;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(570, 0);
+            this.panel1.Location = new System.Drawing.Point(703, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(181, 533);
+            this.panel1.Size = new System.Drawing.Size(436, 552);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // BookTicketpanel
             // 
             this.BookTicketpanel.BackColor = System.Drawing.Color.DarkKhaki;
+            this.BookTicketpanel.Controls.Add(this.CancelTicketpanel);
             this.BookTicketpanel.Controls.Add(this.button2);
             this.BookTicketpanel.Controls.Add(this.button1);
-            this.BookTicketpanel.Controls.Add(this.CancelTicketpanel);
             this.BookTicketpanel.Controls.Add(this.TicketIdcomboBox);
             this.BookTicketpanel.Controls.Add(this.Ticketidlabel);
             this.BookTicketpanel.Controls.Add(this.BusIdcomboBox);
@@ -138,11 +137,34 @@ namespace BusRapidTransitManagement.Forms
             this.BookTicketpanel.Controls.Add(this.ContactNolabel);
             this.BookTicketpanel.Controls.Add(this.Fromlabel);
             this.BookTicketpanel.Controls.Add(this.PassengerNamelabel);
-            this.BookTicketpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BookTicketpanel.Location = new System.Drawing.Point(204, 0);
             this.BookTicketpanel.Name = "BookTicketpanel";
-            this.BookTicketpanel.Size = new System.Drawing.Size(366, 533);
+            this.BookTicketpanel.Size = new System.Drawing.Size(499, 552);
             this.BookTicketpanel.TabIndex = 12;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(-176, 314);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 44);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Cancel Ticket";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.CancelTicketbutton_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(-176, 176);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 42);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Book Ticket";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.BookTicketbutton_Click);
             // 
             // CancelTicketpanel
             // 
@@ -154,7 +176,7 @@ namespace BusRapidTransitManagement.Forms
             this.CancelTicketpanel.Controls.Add(this.CancelDatelabel);
             this.CancelTicketpanel.Location = new System.Drawing.Point(0, 0);
             this.CancelTicketpanel.Name = "CancelTicketpanel";
-            this.CancelTicketpanel.Size = new System.Drawing.Size(365, 533);
+            this.CancelTicketpanel.Size = new System.Drawing.Size(499, 552);
             this.CancelTicketpanel.TabIndex = 8;
             this.CancelTicketpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CancelTicketpanel_Paint);
             // 
@@ -172,7 +194,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.ConfirmCancelbutton.BackColor = System.Drawing.Color.Crimson;
             this.ConfirmCancelbutton.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmCancelbutton.Location = new System.Drawing.Point(81, 301);
+            this.ConfirmCancelbutton.Location = new System.Drawing.Point(128, 300);
             this.ConfirmCancelbutton.Name = "ConfirmCancelbutton";
             this.ConfirmCancelbutton.Size = new System.Drawing.Size(181, 51);
             this.ConfirmCancelbutton.TabIndex = 8;
@@ -381,30 +403,6 @@ namespace BusRapidTransitManagement.Forms
             this.PassengerNamelabel.TabIndex = 0;
             this.PassengerNamelabel.Text = "PassengerName";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(-176, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 42);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Book Ticket";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.BookTicketbutton_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(-176, 314);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 44);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cancel Ticket";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.CancelTicketbutton_Click);
-            // 
             // Ticketshow_Stuff_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,7 +411,7 @@ namespace BusRapidTransitManagement.Forms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Ticketbookingpanel);
             this.Name = "Ticketshow_Stuff_";
-            this.Size = new System.Drawing.Size(751, 533);
+            this.Size = new System.Drawing.Size(1139, 552);
             this.Ticketbookingpanel.ResumeLayout(false);
             this.BookTicketpanel.ResumeLayout(false);
             this.BookTicketpanel.PerformLayout();

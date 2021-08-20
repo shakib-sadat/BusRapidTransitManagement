@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusRapidTransitManagement.Data_Access;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace BusRapidTransitManagement.Forms
 {
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
@@ -47,6 +49,8 @@ namespace BusRapidTransitManagement.Forms
 
         private void ManagerLoginbutton_Click(object sender, EventArgs e)
         {
+            ManagerDataAccess managerDataAccess = new ManagerDataAccess();
+
           if(ManagerUsertextBox.Text == "")
             {
                 MessageBox.Show("Enter an user ID");
@@ -57,10 +61,10 @@ namespace BusRapidTransitManagement.Forms
             }
           else
             {
-                if (ManagerUsertextBox.Text == "222" && ManagerPasswordtextBox.Text == "222")
+                if (managerDataAccess.LoginValidation(Convert.ToInt32(ManagerUsertextBox.Text), ManagerPasswordtextBox.Text))
                 {
                     MessageBox.Show("Logged in as a Manager");
-                    ManagerInterface managerInterface = new ManagerInterface();
+                    ManagerInterface managerInterface = new ManagerInterface(Convert.ToInt32(ManagerUsertextBox.Text));
                     managerInterface.Show();
                     this.Hide();
                     //this.Close();

@@ -52,6 +52,7 @@
     <Compile Include="Classes\Manager.cs" />
     <Compile Include="Classes\Passenger.cs" />
     <Compile Include="Data Access\DataAccess.cs" />
+    <Compile Include="Data Access\ManagerDataAccess.cs" />
     <Compile Include="Forms\BusInfo%28Manager%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +76,12 @@
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagerEditInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagerEditInfo.Designer.cs">
+      <DependentUpon>ManagerEditInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ManagerInterface.cs">
       <SubType>Form</SubType>
@@ -133,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagerEditInfo.resx">
+      <DependentUpon>ManagerEditInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagerInterface.resx">
       <DependentUpon>ManagerInterface.cs</DependentUpon>

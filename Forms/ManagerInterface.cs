@@ -12,9 +12,11 @@ namespace BusRapidTransitManagement.Forms
 {
     public partial class ManagerInterface : Form
     {
-        public ManagerInterface()
+        public int ManagerInterfaceid ;
+        public ManagerInterface(int id)
         {
             InitializeComponent();
+            this.ManagerInterfaceid = id;
         }
 
         private void ManagerInterface_FormClosing(object sender, FormClosingEventArgs e)
@@ -24,6 +26,7 @@ namespace BusRapidTransitManagement.Forms
 
         private void Stuffinformationupdatebutton_Click(object sender, EventArgs e)
         {
+            Managerhomepanel.Controls.Clear();
             Managerhomepanel.Controls.Add(new StuffInfoControl_manager_());
         }
 
@@ -44,6 +47,12 @@ namespace BusRapidTransitManagement.Forms
         {
             Managerhomepanel.Controls.Clear();
             Managerhomepanel.Controls.Add(new BusInfo_Manager_());
+        }
+
+        private void managereditinfobutton_Click(object sender, EventArgs e)
+        {
+            Managerhomepanel.Controls.Clear();
+            Managerhomepanel.Controls.Add(new ManagerEditInfo(this.ManagerInterfaceid));
         }
     }
 }

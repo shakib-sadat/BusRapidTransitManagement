@@ -36,18 +36,10 @@ namespace BusRapidTransitManagement.Forms
             this.Addstuffpanel = new System.Windows.Forms.Panel();
             this.AddstuffSalarytextBox = new System.Windows.Forms.TextBox();
             this.AddstuffSalarylabel = new System.Windows.Forms.Label();
-            this.AddstuffIdtextBox = new System.Windows.Forms.TextBox();
-            this.AddstuffIdlabel = new System.Windows.Forms.Label();
-            this.AddstufffemaleradioButton = new System.Windows.Forms.RadioButton();
-            this.AddstuffMaleradioButton = new System.Windows.Forms.RadioButton();
             this.AddStuffupdatebutton = new System.Windows.Forms.Button();
-            this.AddstuffAgetextBox = new System.Windows.Forms.TextBox();
-            this.AddstuffAddresstextBox = new System.Windows.Forms.TextBox();
             this.AddstuffContacttextBox = new System.Windows.Forms.TextBox();
             this.AddstuffEmailtextBox = new System.Windows.Forms.TextBox();
             this.AddstuffNametextBox = new System.Windows.Forms.TextBox();
-            this.AddstuffAgelabel = new System.Windows.Forms.Label();
-            this.AddstuffAddresslabel = new System.Windows.Forms.Label();
             this.AddstuffContactlabel = new System.Windows.Forms.Label();
             this.AddstuffEmaillabel = new System.Windows.Forms.Label();
             this.AddstuffGenderlabel = new System.Windows.Forms.Label();
@@ -64,10 +56,17 @@ namespace BusRapidTransitManagement.Forms
             this.ManageNewsalarytextBox = new System.Windows.Forms.TextBox();
             this.ManageslaryIdlabel = new System.Windows.Forms.Label();
             this.ManageNewsalarylabel = new System.Windows.Forms.Label();
+            this.StuffControlgroupBox = new System.Windows.Forms.GroupBox();
+            this.StuffControldataGridView = new System.Windows.Forms.DataGridView();
+            this.AddStuffGendertextBox = new System.Windows.Forms.TextBox();
+            this.AddstuffAgelabel = new System.Windows.Forms.Label();
+            this.AddstuffAgetextBox = new System.Windows.Forms.TextBox();
             this.stuffaddingdropingpanel.SuspendLayout();
             this.Addstuffpanel.SuspendLayout();
             this.Removestuffpanel.SuspendLayout();
             this.UpdateStuffpanel.SuspendLayout();
+            this.StuffControlgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StuffControldataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Addstuffbutton
@@ -114,32 +113,27 @@ namespace BusRapidTransitManagement.Forms
             // Addstuffpanel
             // 
             this.Addstuffpanel.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.Addstuffpanel.Controls.Add(this.AddstuffAgetextBox);
+            this.Addstuffpanel.Controls.Add(this.AddstuffAgelabel);
+            this.Addstuffpanel.Controls.Add(this.AddStuffGendertextBox);
             this.Addstuffpanel.Controls.Add(this.AddstuffSalarytextBox);
             this.Addstuffpanel.Controls.Add(this.AddstuffSalarylabel);
-            this.Addstuffpanel.Controls.Add(this.AddstuffIdtextBox);
-            this.Addstuffpanel.Controls.Add(this.AddstuffIdlabel);
-            this.Addstuffpanel.Controls.Add(this.AddstufffemaleradioButton);
-            this.Addstuffpanel.Controls.Add(this.AddstuffMaleradioButton);
             this.Addstuffpanel.Controls.Add(this.AddStuffupdatebutton);
-            this.Addstuffpanel.Controls.Add(this.AddstuffAgetextBox);
-            this.Addstuffpanel.Controls.Add(this.AddstuffAddresstextBox);
             this.Addstuffpanel.Controls.Add(this.AddstuffContacttextBox);
             this.Addstuffpanel.Controls.Add(this.AddstuffEmailtextBox);
             this.Addstuffpanel.Controls.Add(this.AddstuffNametextBox);
-            this.Addstuffpanel.Controls.Add(this.AddstuffAgelabel);
-            this.Addstuffpanel.Controls.Add(this.AddstuffAddresslabel);
             this.Addstuffpanel.Controls.Add(this.AddstuffContactlabel);
             this.Addstuffpanel.Controls.Add(this.AddstuffEmaillabel);
             this.Addstuffpanel.Controls.Add(this.AddstuffGenderlabel);
             this.Addstuffpanel.Controls.Add(this.Addstuffnamelabel);
-            this.Addstuffpanel.Location = new System.Drawing.Point(227, 76);
+            this.Addstuffpanel.Location = new System.Drawing.Point(219, 73);
             this.Addstuffpanel.Name = "Addstuffpanel";
             this.Addstuffpanel.Size = new System.Drawing.Size(405, 591);
             this.Addstuffpanel.TabIndex = 4;
             // 
             // AddstuffSalarytextBox
             // 
-            this.AddstuffSalarytextBox.Location = new System.Drawing.Point(110, 293);
+            this.AddstuffSalarytextBox.Location = new System.Drawing.Point(110, 225);
             this.AddstuffSalarytextBox.Name = "AddstuffSalarytextBox";
             this.AddstuffSalarytextBox.Size = new System.Drawing.Size(100, 20);
             this.AddstuffSalarytextBox.TabIndex = 18;
@@ -147,83 +141,32 @@ namespace BusRapidTransitManagement.Forms
             // AddstuffSalarylabel
             // 
             this.AddstuffSalarylabel.AutoSize = true;
-            this.AddstuffSalarylabel.Location = new System.Drawing.Point(21, 296);
+            this.AddstuffSalarylabel.Location = new System.Drawing.Point(24, 232);
             this.AddstuffSalarylabel.Name = "AddstuffSalarylabel";
             this.AddstuffSalarylabel.Size = new System.Drawing.Size(36, 13);
             this.AddstuffSalarylabel.TabIndex = 17;
             this.AddstuffSalarylabel.Text = "Salary";
             // 
-            // AddstuffIdtextBox
-            // 
-            this.AddstuffIdtextBox.Location = new System.Drawing.Point(110, 79);
-            this.AddstuffIdtextBox.Name = "AddstuffIdtextBox";
-            this.AddstuffIdtextBox.Size = new System.Drawing.Size(100, 20);
-            this.AddstuffIdtextBox.TabIndex = 16;
-            // 
-            // AddstuffIdlabel
-            // 
-            this.AddstuffIdlabel.AutoSize = true;
-            this.AddstuffIdlabel.Location = new System.Drawing.Point(18, 86);
-            this.AddstuffIdlabel.Name = "AddstuffIdlabel";
-            this.AddstuffIdlabel.Size = new System.Drawing.Size(16, 13);
-            this.AddstuffIdlabel.TabIndex = 15;
-            this.AddstuffIdlabel.Text = "Id";
-            // 
-            // AddstufffemaleradioButton
-            // 
-            this.AddstufffemaleradioButton.AutoSize = true;
-            this.AddstufffemaleradioButton.Location = new System.Drawing.Point(202, 322);
-            this.AddstufffemaleradioButton.Name = "AddstufffemaleradioButton";
-            this.AddstufffemaleradioButton.Size = new System.Drawing.Size(59, 17);
-            this.AddstufffemaleradioButton.TabIndex = 14;
-            this.AddstufffemaleradioButton.TabStop = true;
-            this.AddstufffemaleradioButton.Text = "Female";
-            this.AddstufffemaleradioButton.UseVisualStyleBackColor = true;
-            // 
-            // AddstuffMaleradioButton
-            // 
-            this.AddstuffMaleradioButton.AutoSize = true;
-            this.AddstuffMaleradioButton.Location = new System.Drawing.Point(108, 322);
-            this.AddstuffMaleradioButton.Name = "AddstuffMaleradioButton";
-            this.AddstuffMaleradioButton.Size = new System.Drawing.Size(48, 17);
-            this.AddstuffMaleradioButton.TabIndex = 13;
-            this.AddstuffMaleradioButton.TabStop = true;
-            this.AddstuffMaleradioButton.Text = "Male";
-            this.AddstuffMaleradioButton.UseVisualStyleBackColor = true;
-            // 
             // AddStuffupdatebutton
             // 
-            this.AddStuffupdatebutton.Location = new System.Drawing.Point(108, 433);
+            this.AddStuffupdatebutton.Location = new System.Drawing.Point(121, 436);
             this.AddStuffupdatebutton.Name = "AddStuffupdatebutton";
             this.AddStuffupdatebutton.Size = new System.Drawing.Size(75, 23);
             this.AddStuffupdatebutton.TabIndex = 12;
             this.AddStuffupdatebutton.Text = "Add";
             this.AddStuffupdatebutton.UseVisualStyleBackColor = true;
-            // 
-            // AddstuffAgetextBox
-            // 
-            this.AddstuffAgetextBox.Location = new System.Drawing.Point(108, 127);
-            this.AddstuffAgetextBox.Name = "AddstuffAgetextBox";
-            this.AddstuffAgetextBox.Size = new System.Drawing.Size(100, 20);
-            this.AddstuffAgetextBox.TabIndex = 11;
-            // 
-            // AddstuffAddresstextBox
-            // 
-            this.AddstuffAddresstextBox.Location = new System.Drawing.Point(108, 169);
-            this.AddstuffAddresstextBox.Name = "AddstuffAddresstextBox";
-            this.AddstuffAddresstextBox.Size = new System.Drawing.Size(100, 20);
-            this.AddstuffAddresstextBox.TabIndex = 10;
+            this.AddStuffupdatebutton.Click += new System.EventHandler(this.AddStuffupdatebutton_Click);
             // 
             // AddstuffContacttextBox
             // 
-            this.AddstuffContacttextBox.Location = new System.Drawing.Point(110, 211);
+            this.AddstuffContacttextBox.Location = new System.Drawing.Point(110, 86);
             this.AddstuffContacttextBox.Name = "AddstuffContacttextBox";
             this.AddstuffContacttextBox.Size = new System.Drawing.Size(100, 20);
             this.AddstuffContacttextBox.TabIndex = 9;
             // 
             // AddstuffEmailtextBox
             // 
-            this.AddstuffEmailtextBox.Location = new System.Drawing.Point(110, 261);
+            this.AddstuffEmailtextBox.Location = new System.Drawing.Point(110, 162);
             this.AddstuffEmailtextBox.Name = "AddstuffEmailtextBox";
             this.AddstuffEmailtextBox.Size = new System.Drawing.Size(100, 20);
             this.AddstuffEmailtextBox.TabIndex = 7;
@@ -235,28 +178,10 @@ namespace BusRapidTransitManagement.Forms
             this.AddstuffNametextBox.Size = new System.Drawing.Size(100, 20);
             this.AddstuffNametextBox.TabIndex = 6;
             // 
-            // AddstuffAgelabel
-            // 
-            this.AddstuffAgelabel.AutoSize = true;
-            this.AddstuffAgelabel.Location = new System.Drawing.Point(18, 134);
-            this.AddstuffAgelabel.Name = "AddstuffAgelabel";
-            this.AddstuffAgelabel.Size = new System.Drawing.Size(26, 13);
-            this.AddstuffAgelabel.TabIndex = 5;
-            this.AddstuffAgelabel.Text = "Age";
-            // 
-            // AddstuffAddresslabel
-            // 
-            this.AddstuffAddresslabel.AutoSize = true;
-            this.AddstuffAddresslabel.Location = new System.Drawing.Point(18, 176);
-            this.AddstuffAddresslabel.Name = "AddstuffAddresslabel";
-            this.AddstuffAddresslabel.Size = new System.Drawing.Size(45, 13);
-            this.AddstuffAddresslabel.TabIndex = 4;
-            this.AddstuffAddresslabel.Text = "Address";
-            // 
             // AddstuffContactlabel
             // 
             this.AddstuffContactlabel.AutoSize = true;
-            this.AddstuffContactlabel.Location = new System.Drawing.Point(18, 218);
+            this.AddstuffContactlabel.Location = new System.Drawing.Point(18, 93);
             this.AddstuffContactlabel.Name = "AddstuffContactlabel";
             this.AddstuffContactlabel.Size = new System.Drawing.Size(61, 13);
             this.AddstuffContactlabel.TabIndex = 3;
@@ -265,7 +190,7 @@ namespace BusRapidTransitManagement.Forms
             // AddstuffEmaillabel
             // 
             this.AddstuffEmaillabel.AutoSize = true;
-            this.AddstuffEmaillabel.Location = new System.Drawing.Point(18, 268);
+            this.AddstuffEmaillabel.Location = new System.Drawing.Point(24, 162);
             this.AddstuffEmaillabel.Name = "AddstuffEmaillabel";
             this.AddstuffEmaillabel.Size = new System.Drawing.Size(32, 13);
             this.AddstuffEmaillabel.TabIndex = 2;
@@ -274,7 +199,7 @@ namespace BusRapidTransitManagement.Forms
             // AddstuffGenderlabel
             // 
             this.AddstuffGenderlabel.AutoSize = true;
-            this.AddstuffGenderlabel.Location = new System.Drawing.Point(18, 326);
+            this.AddstuffGenderlabel.Location = new System.Drawing.Point(24, 321);
             this.AddstuffGenderlabel.Name = "AddstuffGenderlabel";
             this.AddstuffGenderlabel.Size = new System.Drawing.Size(42, 13);
             this.AddstuffGenderlabel.TabIndex = 1;
@@ -297,14 +222,14 @@ namespace BusRapidTransitManagement.Forms
             this.Removestuffpanel.Controls.Add(this.RemovestuffIdtextBox);
             this.Removestuffpanel.Controls.Add(this.RemovestuffNametextBox);
             this.Removestuffpanel.Controls.Add(this.RemovestuffNamelabel);
-            this.Removestuffpanel.Location = new System.Drawing.Point(230, 76);
+            this.Removestuffpanel.Location = new System.Drawing.Point(216, 76);
             this.Removestuffpanel.Name = "Removestuffpanel";
             this.Removestuffpanel.Size = new System.Drawing.Size(402, 591);
             this.Removestuffpanel.TabIndex = 17;
             // 
             // Removestuffupdatebutton1
             // 
-            this.Removestuffupdatebutton1.Location = new System.Drawing.Point(100, 176);
+            this.Removestuffupdatebutton1.Location = new System.Drawing.Point(124, 433);
             this.Removestuffupdatebutton1.Name = "Removestuffupdatebutton1";
             this.Removestuffupdatebutton1.Size = new System.Drawing.Size(75, 23);
             this.Removestuffupdatebutton1.TabIndex = 18;
@@ -351,14 +276,14 @@ namespace BusRapidTransitManagement.Forms
             this.UpdateStuffpanel.Controls.Add(this.ManageNewsalarytextBox);
             this.UpdateStuffpanel.Controls.Add(this.ManageslaryIdlabel);
             this.UpdateStuffpanel.Controls.Add(this.ManageNewsalarylabel);
-            this.UpdateStuffpanel.Location = new System.Drawing.Point(638, 76);
+            this.UpdateStuffpanel.Location = new System.Drawing.Point(639, 76);
             this.UpdateStuffpanel.Name = "UpdateStuffpanel";
             this.UpdateStuffpanel.Size = new System.Drawing.Size(405, 591);
             this.UpdateStuffpanel.TabIndex = 18;
             // 
             // ManageSalaryupdatebutton
             // 
-            this.ManageSalaryupdatebutton.Location = new System.Drawing.Point(131, 433);
+            this.ManageSalaryupdatebutton.Location = new System.Drawing.Point(156, 433);
             this.ManageSalaryupdatebutton.Name = "ManageSalaryupdatebutton";
             this.ManageSalaryupdatebutton.Size = new System.Drawing.Size(75, 23);
             this.ManageSalaryupdatebutton.TabIndex = 19;
@@ -397,16 +322,61 @@ namespace BusRapidTransitManagement.Forms
             this.ManageNewsalarylabel.TabIndex = 9;
             this.ManageNewsalarylabel.Text = "New Salary";
             // 
+            // StuffControlgroupBox
+            // 
+            this.StuffControlgroupBox.Controls.Add(this.StuffControldataGridView);
+            this.StuffControlgroupBox.Location = new System.Drawing.Point(1050, 76);
+            this.StuffControlgroupBox.Name = "StuffControlgroupBox";
+            this.StuffControlgroupBox.Size = new System.Drawing.Size(382, 309);
+            this.StuffControlgroupBox.TabIndex = 19;
+            this.StuffControlgroupBox.TabStop = false;
+            this.StuffControlgroupBox.Text = "Stuff";
+            // 
+            // StuffControldataGridView
+            // 
+            this.StuffControldataGridView.AllowUserToAddRows = false;
+            this.StuffControldataGridView.AllowUserToDeleteRows = false;
+            this.StuffControldataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StuffControldataGridView.Location = new System.Drawing.Point(7, 30);
+            this.StuffControldataGridView.Name = "StuffControldataGridView";
+            this.StuffControldataGridView.ReadOnly = true;
+            this.StuffControldataGridView.Size = new System.Drawing.Size(369, 253);
+            this.StuffControldataGridView.TabIndex = 0;
+            // 
+            // AddStuffGendertextBox
+            // 
+            this.AddStuffGendertextBox.Location = new System.Drawing.Point(110, 321);
+            this.AddStuffGendertextBox.Name = "AddStuffGendertextBox";
+            this.AddStuffGendertextBox.Size = new System.Drawing.Size(100, 20);
+            this.AddStuffGendertextBox.TabIndex = 19;
+            // 
+            // AddstuffAgelabel
+            // 
+            this.AddstuffAgelabel.AutoSize = true;
+            this.AddstuffAgelabel.Location = new System.Drawing.Point(24, 274);
+            this.AddstuffAgelabel.Name = "AddstuffAgelabel";
+            this.AddstuffAgelabel.Size = new System.Drawing.Size(26, 13);
+            this.AddstuffAgelabel.TabIndex = 20;
+            this.AddstuffAgelabel.Text = "Age";
+            // 
+            // AddstuffAgetextBox
+            // 
+            this.AddstuffAgetextBox.Location = new System.Drawing.Point(110, 267);
+            this.AddstuffAgetextBox.Name = "AddstuffAgetextBox";
+            this.AddstuffAgetextBox.Size = new System.Drawing.Size(100, 20);
+            this.AddstuffAgetextBox.TabIndex = 21;
+            // 
             // StuffInfoControl_manager_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.StuffControlgroupBox);
             this.Controls.Add(this.Addstuffpanel);
             this.Controls.Add(this.UpdateStuffpanel);
             this.Controls.Add(this.Removestuffpanel);
             this.Controls.Add(this.stuffaddingdropingpanel);
             this.Name = "StuffInfoControl_manager_";
-            this.Size = new System.Drawing.Size(1233, 822);
+            this.Size = new System.Drawing.Size(1478, 822);
             this.Load += new System.EventHandler(this.StuffInfoControl_manager__Load);
             this.stuffaddingdropingpanel.ResumeLayout(false);
             this.Addstuffpanel.ResumeLayout(false);
@@ -415,6 +385,8 @@ namespace BusRapidTransitManagement.Forms
             this.Removestuffpanel.PerformLayout();
             this.UpdateStuffpanel.ResumeLayout(false);
             this.UpdateStuffpanel.PerformLayout();
+            this.StuffControlgroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StuffControldataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,18 +399,10 @@ namespace BusRapidTransitManagement.Forms
         private System.Windows.Forms.Panel stuffaddingdropingpanel;
         private System.Windows.Forms.Panel Addstuffpanel;
         private System.Windows.Forms.Label AddstuffSalarylabel;
-        private System.Windows.Forms.TextBox AddstuffIdtextBox;
-        private System.Windows.Forms.Label AddstuffIdlabel;
-        private System.Windows.Forms.RadioButton AddstufffemaleradioButton;
-        private System.Windows.Forms.RadioButton AddstuffMaleradioButton;
         private System.Windows.Forms.Button AddStuffupdatebutton;
-        private System.Windows.Forms.TextBox AddstuffAgetextBox;
-        private System.Windows.Forms.TextBox AddstuffAddresstextBox;
         private System.Windows.Forms.TextBox AddstuffContacttextBox;
         private System.Windows.Forms.TextBox AddstuffEmailtextBox;
         private System.Windows.Forms.TextBox AddstuffNametextBox;
-        private System.Windows.Forms.Label AddstuffAgelabel;
-        private System.Windows.Forms.Label AddstuffAddresslabel;
         private System.Windows.Forms.Label AddstuffContactlabel;
         private System.Windows.Forms.Label AddstuffEmaillabel;
         private System.Windows.Forms.Label AddstuffGenderlabel;
@@ -456,5 +420,10 @@ namespace BusRapidTransitManagement.Forms
         private System.Windows.Forms.TextBox ManageslaryIdtextBox;
         private System.Windows.Forms.Button Removestuffupdatebutton1;
         private System.Windows.Forms.Button ManageSalaryupdatebutton;
+        private System.Windows.Forms.GroupBox StuffControlgroupBox;
+        private System.Windows.Forms.DataGridView StuffControldataGridView;
+        private System.Windows.Forms.TextBox AddStuffGendertextBox;
+        private System.Windows.Forms.TextBox AddstuffAgetextBox;
+        private System.Windows.Forms.Label AddstuffAgelabel;
     }
 }
