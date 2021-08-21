@@ -65,6 +65,12 @@
     <Compile Include="Forms\BusInfo%28stuff%29.Designer.cs">
       <DependentUpon>BusInfo%28stuff%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Counters%28Manager%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Counters%28Manager%29.Designer.cs">
+      <DependentUpon>Counters%28Manager%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Counters%28stuff%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BusInfo%28stuff%29.resx">
       <DependentUpon>BusInfo%28stuff%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Counters%28Manager%29.resx">
+      <DependentUpon>Counters%28Manager%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Counters%28stuff%29.resx">
       <DependentUpon>Counters%28stuff%29.cs</DependentUpon>

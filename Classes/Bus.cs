@@ -11,16 +11,20 @@ namespace BusRapidTransitManagement
         private int busId;
         private string busName;
         private int busCapacity;
-        private List<Destination> destinationList = new List<Destination>();
-        private Passenger[] passengerList;
+        
+        //private List<Destination> destinationList = new List<Destination>();
+        private string departureLocation;
+        private string arrivalLocation;
+        //private Passenger[] passengerList;
         public int BusId
         {
             set { this.busId = value; }
             get { return busId; }
         }
+        
         public string BusName
         {
-            set { this.BusName = value; }
+            set { this.busName = value; }
             get { return busName; }
         }
 
@@ -30,13 +34,13 @@ namespace BusRapidTransitManagement
             get { return busCapacity; }
         }
 
-        public List<Destination> DestinationList
+        /*public List<Destination> DestinationList
         {
             set { this.destinationList = value; }
             get { return destinationList; }
-        }
+        }*/
 
-        public Passenger[] PassengerList
+       /* public Passenger[] PassengerList
         {
             set { this.passengerList = value; }
             get { return passengerList; }
@@ -53,10 +57,20 @@ namespace BusRapidTransitManagement
                 }
 
             }
+        }*/
+        public string DepartureLocation
+        {
+            set { this.departureLocation = value; }
+            get { return departureLocation; }
         }
 
+        public string ArrivalLocation
+        {
+            set { this.arrivalLocation = value; }
+            get { return arrivalLocation; }
+        }
 
-        public void removePassenger(Passenger passenger)
+        /*public void removePassenger(Passenger passenger)
         {
             for (int i = 0; i < passengerList.Length; i++)
             {
@@ -93,7 +107,7 @@ namespace BusRapidTransitManagement
             }
             return null;
 
-        }
+        }*/
     }
 }
 

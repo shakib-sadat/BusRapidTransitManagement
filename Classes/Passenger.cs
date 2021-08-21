@@ -10,7 +10,7 @@ namespace BusRapidTransitManagement
     {
         private string passengerName;
         private int passengerId;
-        private int phoneNumber;
+        private string phoneNumber;
 
         public string PassengerName
         {
@@ -24,7 +24,7 @@ namespace BusRapidTransitManagement
             get { return passengerId; }
         }
 
-        public int PhoneNumber
+        public string PhoneNumber
         {
             set { this.phoneNumber = value; }
             get { return phoneNumber; }

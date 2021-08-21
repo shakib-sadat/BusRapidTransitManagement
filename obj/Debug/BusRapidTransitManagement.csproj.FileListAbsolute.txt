@@ -19,3 +19,4 @@ S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.Stuff
 S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.Ticketshow_Manager_.resources
 S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.BusInfo_Manager_.resources
 S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.ManagerEditInfo.resources
+S:\Git\BusRapidTransitManagement\obj\Debug\BusRapidTransitManagement.Forms.Counters_Manager_.resources

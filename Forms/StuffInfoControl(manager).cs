@@ -32,6 +32,19 @@ namespace BusRapidTransitManagement.Forms
             if (managerDataAccess.GetStuffControl() != null)
                 StuffControldataGridView.DataSource = managerDataAccess.GetStuffControl();
         }
+
+        void ClearFields()
+        {
+            AddstuffNametextBox.Text = string.Empty;
+            AddstuffEmailtextBox.Text = string.Empty;
+            AddstuffSalarytextBox.Text = string.Empty;
+            AddstuffAgetextBox.Text = string.Empty;
+            AddStuffGendertextBox.Text = string.Empty;
+            AddstuffContacttextBox.Text = string.Empty;
+            AddstuffShifttextBox.Text = string.Empty;
+
+
+        }
         private void Addstuffbutton_Click(object sender, EventArgs e)
         {
             Addstuffpanel.Visible = true;
@@ -58,69 +71,82 @@ namespace BusRapidTransitManagement.Forms
         {
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
             //bool temp = false;
-            if (managerDataAccess.AddStuff(AddstuffNametextBox.Text, AddstuffEmailtextBox.Text, Convert.ToDouble(AddstuffSalarytextBox.Text) , Convert.ToInt32(AddstuffSalarytextBox.Text) ,AddStuffGendertextBox.Text, AddstuffContacttextBox.Text))
+            if(AddstuffNametextBox.Text == "")
             {
-               MessageBox.Show("New Stuff Added");
-               AddGridView();
+                MessageBox.Show("Enter a Name");
             }
-
-           else
-           {
-               MessageBox.Show("Error in Adding");
-           }
-
+            else if(AddstuffEmailtextBox.Text == "")
+            {
+                MessageBox.Show("Enter an Email Id");
+            }
+            else if (AddstuffShifttextBox.Text == "")
+            {
+                MessageBox.Show("Enter Shift");
+            }
+            else if (AddstuffSalarytextBox.Text == "")
+            {
+                MessageBox.Show("Enter Salary");
+            }
+            else if (AddstuffAgetextBox.Text == "")
+            {
+                MessageBox.Show("Enter Age");
+            }
+            else if (AddStuffGendertextBox.Text == "")
+            {
+                MessageBox.Show("Enter Gender");
+            }
+            else if (AddstuffContacttextBox.Text == "")
+            {
+                MessageBox.Show("Enter Contact No");
+            }
+            else 
+            {
+                if (managerDataAccess.AddStuff(AddstuffNametextBox.Text, AddstuffEmailtextBox.Text, AddstuffShifttextBox.Text, Convert.ToDouble(AddstuffSalarytextBox.Text), Convert.ToInt32(AddstuffAgetextBox.Text), AddStuffGendertextBox.Text, AddstuffContacttextBox.Text))
+                {
+                    MessageBox.Show("New Stuff Added");
+                    AddGridView();
+                    ClearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error in Adding");
+                    ClearFields();
+                }
+            }
             
 
+        }
 
-            /*if (AddstuffNametextBox.Text != "")
+        private void Removestuffupdatebutton1_Click(object sender, EventArgs e)
+        {
+            ManagerDataAccess managerDataAccess = new ManagerDataAccess();
+            if(managerDataAccess.RemoveStuff(Convert.ToInt32(RemovestuffIdtextBox.Text)))
             {
-                if (managerDataAccess.AddStuffName(AddstuffNametextBox.Text))
-                { temp = true; }
-                else temp = false;
-            }
-
-            if (AddstuffEmailtextBox.Text != "")
-            {
-                if (managerDataAccess.AddStuffEmail(AddstuffEmailtextBox.Text))
-                { temp = true; }
-                else temp = false;
-            }
-
-            if(AddstuffSalarytextBox.Text != "")
-            {
-                if (managerDataAccess.AddStuffSalary(Convert.ToDouble(AddstuffSalarytextBox.Text)))
-                { temp = true; }
-                else temp = false;
-            }
-            if (AddStuffGendertextBox.Text != "")
-            {
-                if (managerDataAccess.AddStuffGender(AddStuffGendertextBox.Text))
-                { temp = true; }
-                else temp = false;
-            }
-            if (AddstuffContacttextBox.Text != "")
-            {
-                if (managerDataAccess.AddStuffContactNo(AddstuffContacttextBox.Text))
-                { temp = true; }
-                else temp = false;
-            }
-
-            if (AddstuffAgetextBox.Text != "")
-            {
-                if (managerDataAccess.AddStuffAge(Convert.ToInt32(AddstuffAgetextBox.Text)))
-                { temp = true; }
-                else temp = false;
+                MessageBox.Show("Stuff removed");
+                AddGridView();
+                ClearFields();
             }
             else
             {
-                MessageBox.Show("Enter Values");
+                MessageBox.Show("Can Not be Removed");
+                ClearFields();
             }
+        }
 
-            if(temp == true)
+        private void ManageSalaryupdatebutton_Click(object sender, EventArgs e)
+        {
+            ManagerDataAccess managerDataAccess = new ManagerDataAccess();
+            if(managerDataAccess.ManageSalary(Convert.ToInt32(ManageslaryIdtextBox.Text) , Convert.ToDouble(ManageNewsalarytextBox.Text)))
             {
-                MessageBox.Show("Added Successfully");
-
-            }*/
+                MessageBox.Show("Salary Updated");
+                AddGridView();
+                ClearFields();
+            }
+            else
+            {
+                MessageBox.Show("Can Not Update Salary");
+                ClearFields();
+            }
         }
     }
 }

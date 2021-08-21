@@ -9,39 +9,60 @@ namespace BusRapidTransitManagement
     class Ticket
     {
         private int ticketId;
-        private int price;
-        private Passenger npassenger;
-        private Destination departureLocation;
-        private Destination arrivalLocation;
+        private double price;
+        //private Passenger npassenger;
+        private string departureLocation;
+        private string arrivalLocation;
         private string time;
         private string date;
         private string seatNo;
+        private string passengerName;
+        private int passengerId;
+        private string phoneNumber;
+        private int busId;
 
+        public string PassengerName
+        {
+            set { this.passengerName = value; }
+            get { return passengerName; }
+        }
+
+        public int PassengerId
+        {
+            set { this.passengerId = value; }
+            get { return passengerId; }
+        }
+
+        public string PhoneNumber
+        {
+            set { this.phoneNumber = value; }
+            get { return phoneNumber; }
+        }
         public int TicketId
         {
             set { this.ticketId = value; }
             get { return ticketId; }
         }
 
-        public int Price
+        public double Price
         {
             set { this.price = value; }
             get { return price; }
         }
 
-        public Passenger Npassenger
+        /*public Passenger Npassenger
         {
             set { this.npassenger = value; }
             get { return npassenger; }
-        }
+        }*/
 
-        public Destination DepartureLocation
+        public string DepartureLocation
         {
             set { this.departureLocation = value; }
             get { return departureLocation; }
         }
 
-        public Destination ArrivalLocation
+        public string ArrivalLocation
         {
             set { this.arrivalLocation = value; }
             get { return arrivalLocation; }
@@ -63,6 +84,11 @@ namespace BusRapidTransitManagement
         {
             set { this.seatNo = value; }
             get { return seatNo; }
+        }
+        public int BusId
+        {
+            set { this.busId = value; }
+            get { return busId; }
         }
     }
 }

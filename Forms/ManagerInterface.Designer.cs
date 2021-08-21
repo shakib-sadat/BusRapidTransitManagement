@@ -32,7 +32,6 @@ namespace BusRapidTransitManagement.Forms
             this.Managerhomepanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.managerCountersbutton = new System.Windows.Forms.Button();
-            this.managerPassengerInfobutton = new System.Windows.Forms.Button();
             this.managerBusInformationbutton = new System.Windows.Forms.Button();
             this.ManagerTicketbutton = new System.Windows.Forms.Button();
             this.managerLogoutbutton = new System.Windows.Forms.Button();
@@ -47,7 +46,7 @@ namespace BusRapidTransitManagement.Forms
             // Managerhomepanel
             // 
             this.Managerhomepanel.BackColor = System.Drawing.Color.DarkCyan;
-            this.Managerhomepanel.Location = new System.Drawing.Point(206, 115);
+            this.Managerhomepanel.Location = new System.Drawing.Point(206, 89);
             this.Managerhomepanel.Name = "Managerhomepanel";
             this.Managerhomepanel.Size = new System.Drawing.Size(1354, 589);
             this.Managerhomepanel.TabIndex = 5;
@@ -69,19 +68,11 @@ namespace BusRapidTransitManagement.Forms
             this.managerCountersbutton.TabIndex = 8;
             this.managerCountersbutton.Text = "Counters";
             this.managerCountersbutton.UseVisualStyleBackColor = true;
-            // 
-            // managerPassengerInfobutton
-            // 
-            this.managerPassengerInfobutton.Location = new System.Drawing.Point(739, 27);
-            this.managerPassengerInfobutton.Name = "managerPassengerInfobutton";
-            this.managerPassengerInfobutton.Size = new System.Drawing.Size(129, 32);
-            this.managerPassengerInfobutton.TabIndex = 7;
-            this.managerPassengerInfobutton.Text = "Passenger Information";
-            this.managerPassengerInfobutton.UseVisualStyleBackColor = true;
+            this.managerCountersbutton.Click += new System.EventHandler(this.managerCountersbutton_Click);
             // 
             // managerBusInformationbutton
             // 
-            this.managerBusInformationbutton.Location = new System.Drawing.Point(567, 27);
+            this.managerBusInformationbutton.Location = new System.Drawing.Point(696, 27);
             this.managerBusInformationbutton.Name = "managerBusInformationbutton";
             this.managerBusInformationbutton.Size = new System.Drawing.Size(128, 32);
             this.managerBusInformationbutton.TabIndex = 6;
@@ -91,7 +82,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             // ManagerTicketbutton
             // 
-            this.ManagerTicketbutton.Location = new System.Drawing.Point(413, 27);
+            this.ManagerTicketbutton.Location = new System.Drawing.Point(480, 27);
             this.ManagerTicketbutton.Name = "ManagerTicketbutton";
             this.ManagerTicketbutton.Size = new System.Drawing.Size(116, 32);
             this.ManagerTicketbutton.TabIndex = 5;
@@ -136,7 +127,6 @@ namespace BusRapidTransitManagement.Forms
             this.ManagerIHomepagepanel.Controls.Add(this.Stuffinformationupdatebutton);
             this.ManagerIHomepagepanel.Controls.Add(this.label1);
             this.ManagerIHomepagepanel.Controls.Add(this.managerCountersbutton);
-            this.ManagerIHomepagepanel.Controls.Add(this.managerPassengerInfobutton);
             this.ManagerIHomepagepanel.Controls.Add(this.managerBusInformationbutton);
             this.ManagerIHomepagepanel.Controls.Add(this.ManagerTicketbutton);
             this.ManagerIHomepagepanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -147,7 +137,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             // Stuffinformationupdatebutton
             // 
-            this.Stuffinformationupdatebutton.Location = new System.Drawing.Point(256, 27);
+            this.Stuffinformationupdatebutton.Location = new System.Drawing.Point(275, 27);
             this.Stuffinformationupdatebutton.Name = "Stuffinformationupdatebutton";
             this.Stuffinformationupdatebutton.Size = new System.Drawing.Size(116, 32);
             this.Stuffinformationupdatebutton.TabIndex = 10;
@@ -179,7 +169,6 @@ namespace BusRapidTransitManagement.Forms
         private System.Windows.Forms.Panel Managerhomepanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button managerCountersbutton;
-        private System.Windows.Forms.Button managerPassengerInfobutton;
         private System.Windows.Forms.Button managerBusInformationbutton;
         private System.Windows.Forms.Button ManagerTicketbutton;
         private System.Windows.Forms.Button managerLogoutbutton;

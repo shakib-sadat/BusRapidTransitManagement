@@ -54,5 +54,11 @@ namespace BusRapidTransitManagement.Forms
             Managerhomepanel.Controls.Clear();
             Managerhomepanel.Controls.Add(new ManagerEditInfo(this.ManagerInterfaceid));
         }
+
+        private void managerCountersbutton_Click(object sender, EventArgs e)
+        {
+            Managerhomepanel.Controls.Clear();
+            Managerhomepanel.Controls.Add(new Counters_Manager_());
+        }
     }
 }
