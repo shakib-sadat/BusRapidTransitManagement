@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusRapidTransitManagement.Data_Access;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,24 @@ namespace BusRapidTransitManagement.Forms
         {
             Managerhomepanel.Controls.Clear();
             Managerhomepanel.Controls.Add(new Counters_Manager_());
+        }
+
+        private void ManagerInterface_Load(object sender, EventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            Managerhomepanel.Controls.Clear();
+            Managerhomepanel.Controls.Add(homePage);
+            ManagerDataAccess managerDataAccess = new ManagerDataAccess();
+           
+            
+        }
+
+        private void Refreshbutton_Click(object sender, EventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            Managerhomepanel.Controls.Clear();
+            Managerhomepanel.Controls.Add(homePage);
+            
         }
     }
 }

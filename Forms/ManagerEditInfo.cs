@@ -112,17 +112,19 @@ namespace BusRapidTransitManagement.Forms
                 }
 
 
-                if (check == true)
-                {
-                    MessageBox.Show("Updated Successfully");
-                    UpdateGridView();
-                    ManagerNameinfotextBox.Text = ManagerAgeInfotextBox.Text = ManagerPasswordinfotextBox.Text = ManagerEmailinfotextBox.Text = ManagerContactinfotextBox.Text =  "";
 
-
-                }
-                
 
             }
+            if (check == true)
+            {
+                MessageBox.Show("Updated Successfully");
+                UpdateGridView();
+                ManagerNameinfotextBox.Text = ManagerAgeInfotextBox.Text = ManagerPasswordinfotextBox.Text = ManagerEmailinfotextBox.Text = ManagerContactinfotextBox.Text = "";
+
+
+            }
+
         }
+
     }
 }

@@ -13,8 +13,10 @@ namespace BusRapidTransitManagement.Forms
 {
     public partial class Ticketshow_Manager_ : UserControl
     {
+        
         public Ticketshow_Manager_()
         {
+            
             InitializeComponent();
             BookTicketManagerpanel.Visible = false;
             CancelTicketManagerpanel.Visible = false;
@@ -24,12 +26,12 @@ namespace BusRapidTransitManagement.Forms
         {
             PassengerNameManagertextBox.Text = string.Empty;
             ContactNoManagertextBox.Text = string.Empty;
-            FromManagertextBox.Text = string.Empty;
+            FromManagercomboBox.Text = "";
             SeatNoManagertextBox.Text = string.Empty;
-            ToManagertextBox.Text = string.Empty;
+            ToManagercomboBox.Text = string.Empty;
             DepartureManagerdateTimePicker.Text = string.Empty;
             DepartureTimeManagertextBox.Text = string.Empty;
-            BusIdManagertextBox.Text = string.Empty;
+            BusIdcomboBox.Text = string.Empty;
            
 
             PricetextBox.Text = string.Empty;
@@ -39,7 +41,22 @@ namespace BusRapidTransitManagement.Forms
         {
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
             if (managerDataAccess.GetTicketsInfo() != null)
+            {
                 TicketInfodataGridView.DataSource = managerDataAccess.GetTicketsInfo();
+                TicketInfodataGridView.Columns[1].Visible = false;
+
+            }
+            else
+
+                TicketInfodataGridView.DataSource = null;
+
+            if (managerDataAccess.GetBusesInfo() != null)
+            {
+                BusShowdataGridView.DataSource = managerDataAccess.GetBusesInfo();
+
+            }
+            else
+                BusShowdataGridView.DataSource = null;
         }
         private void BookTicketManagerbutton_Click(object sender, EventArgs e)
         {
@@ -49,8 +66,9 @@ namespace BusRapidTransitManagement.Forms
 
         private void CancelTicketManagerbutton_Click(object sender, EventArgs e)
         {
-            //BookTicketManagerpanel.Visible = false ;
+            BookTicketManagerpanel.Visible = false ;
             CancelTicketManagerpanel.Visible = true;
+            ClearFields();
         }
 
         private void TicketConfirmManagerbutton_Click(object sender, EventArgs e)
@@ -65,17 +83,14 @@ namespace BusRapidTransitManagement.Forms
             {
                 MessageBox.Show("Enter Contact No");
             }
-            else if (FromManagertextBox.Text == "")
-            {
-                MessageBox.Show("Enter Departure Location");
-            }
+
             else if (SeatNoManagertextBox.Text == "")
             {
                 MessageBox.Show("Enter SeatNo");
             }
-            else if (ToManagertextBox.Text == "")
+            else if (ToManagercomboBox.Text == FromManagercomboBox.Text)
             {
-                MessageBox.Show("Enter Arrival Location");
+                MessageBox.Show("Enter Invalid Location");
             }
             else if (DepartureManagerdateTimePicker.Text == "")
             {
@@ -85,36 +100,57 @@ namespace BusRapidTransitManagement.Forms
             {
                 MessageBox.Show("Enter Departure Time");
             }
-            else if (BusIdManagertextBox.Text == "")
-            {
-                MessageBox.Show("Enter Bus Id");
-            }
-            
+
+
             else if (PricetextBox.Text == "")
             {
                 MessageBox.Show("Enter Price");
             }
             else
             {
-                if (managerDataAccess.AddTicket( Convert.ToInt32(PricetextBox.Text), Convert.ToInt32(BusIdManagertextBox.Text)  ,FromManagertextBox.Text, ToManagertextBox.Text, DepartureTimeManagertextBox.Text, DepartureManagerdateTimePicker.Text, SeatNoManagertextBox.Text, PassengerNameManagertextBox.Text, ContactNoManagertextBox.Text))
+
+
+                if (FromManagercomboBox.Text == managerDataAccess.GetDepartureDestination(Convert.ToInt32(BusIdcomboBox.Text))
+                    && ToManagercomboBox.Text == managerDataAccess.GetArrivalDestination(Convert.ToInt32(BusIdcomboBox.Text)))
+
                 {
-                    MessageBox.Show("New Ticket Booked");
-                    ConfirmGridView();
-                    ClearFields();
+                    if (managerDataAccess.AddTicket(Convert.ToInt32(PricetextBox.Text), Convert.ToInt32(BusIdcomboBox.Text), FromManagercomboBox.Text,
+                        ToManagercomboBox.Text, DepartureTimeManagertextBox.Text, DepartureManagerdateTimePicker.Text, SeatNoManagertextBox.Text,
+                        PassengerNameManagertextBox.Text, ContactNoManagertextBox.Text))
+                    {
+                        MessageBox.Show("New Ticket Booked");
+                        ConfirmGridView();
+                        ClearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error in Booking");
+                        ClearFields();
+
+                    }
+
                 }
+
                 else
                 {
-                    MessageBox.Show("Error in Booking");
-                    ClearFields();
-                    
+                    MessageBox.Show("Departure And Arrival Location not Correct");
                 }
             }
+
+
+
+        
 
             
         }
         private void Ticketshow_Manager__Load(object sender, EventArgs e)
         {
+            ManagerDataAccess managerDataAccess = new ManagerDataAccess();
             ConfirmGridView();
+           
+            
+            
+
         }
 
         private void ConfirmCancelManagerbutton_Click(object sender, EventArgs e)
@@ -131,6 +167,39 @@ namespace BusRapidTransitManagement.Forms
                 MessageBox.Show("Can Not be canceled");
                 ClearFields();
             }
+        }
+
+        private void BookTicketManagerpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FromManagercomboBox_Click(object sender, EventArgs e)
+        {
+            ManagerDataAccess managerDataAccess = new ManagerDataAccess();
+            FromManagercomboBox.DataSource = managerDataAccess.ViewDestinations();
+        }
+
+        private void ToManagercomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BusIdcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToManagercomboBox_Click(object sender, EventArgs e)
+        {
+            ManagerDataAccess managerDataAccess = new ManagerDataAccess();
+            ToManagercomboBox.DataSource = managerDataAccess.ViewDestinations();
+        }
+
+        private void BusIdcomboBox_Click(object sender, EventArgs e)
+        {
+            ManagerDataAccess managerDataAccess = new ManagerDataAccess();
+            BusIdcomboBox.DataSource = managerDataAccess.ViewBuses();
         }
     }
 }

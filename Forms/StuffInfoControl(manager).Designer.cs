@@ -300,14 +300,14 @@ namespace BusRapidTransitManagement.Forms
             this.UpdateStuffpanel.Controls.Add(this.ManageNewsalarytextBox);
             this.UpdateStuffpanel.Controls.Add(this.ManageslaryIdlabel);
             this.UpdateStuffpanel.Controls.Add(this.ManageNewsalarylabel);
-            this.UpdateStuffpanel.Location = new System.Drawing.Point(639, 76);
+            this.UpdateStuffpanel.Location = new System.Drawing.Point(641, 356);
             this.UpdateStuffpanel.Name = "UpdateStuffpanel";
-            this.UpdateStuffpanel.Size = new System.Drawing.Size(405, 591);
+            this.UpdateStuffpanel.Size = new System.Drawing.Size(405, 235);
             this.UpdateStuffpanel.TabIndex = 18;
             // 
             // ManageSalaryupdatebutton
             // 
-            this.ManageSalaryupdatebutton.Location = new System.Drawing.Point(156, 433);
+            this.ManageSalaryupdatebutton.Location = new System.Drawing.Point(131, 183);
             this.ManageSalaryupdatebutton.Name = "ManageSalaryupdatebutton";
             this.ManageSalaryupdatebutton.Size = new System.Drawing.Size(75, 23);
             this.ManageSalaryupdatebutton.TabIndex = 19;
@@ -317,14 +317,14 @@ namespace BusRapidTransitManagement.Forms
             // 
             // ManageslaryIdtextBox
             // 
-            this.ManageslaryIdtextBox.Location = new System.Drawing.Point(131, 123);
+            this.ManageslaryIdtextBox.Location = new System.Drawing.Point(131, 29);
             this.ManageslaryIdtextBox.Name = "ManageslaryIdtextBox";
             this.ManageslaryIdtextBox.Size = new System.Drawing.Size(100, 20);
             this.ManageslaryIdtextBox.TabIndex = 19;
             // 
             // ManageNewsalarytextBox
             // 
-            this.ManageNewsalarytextBox.Location = new System.Drawing.Point(131, 215);
+            this.ManageNewsalarytextBox.Location = new System.Drawing.Point(131, 117);
             this.ManageNewsalarytextBox.Name = "ManageNewsalarytextBox";
             this.ManageNewsalarytextBox.Size = new System.Drawing.Size(100, 20);
             this.ManageNewsalarytextBox.TabIndex = 17;
@@ -332,7 +332,7 @@ namespace BusRapidTransitManagement.Forms
             // ManageslaryIdlabel
             // 
             this.ManageslaryIdlabel.AutoSize = true;
-            this.ManageslaryIdlabel.Location = new System.Drawing.Point(23, 130);
+            this.ManageslaryIdlabel.Location = new System.Drawing.Point(23, 32);
             this.ManageslaryIdlabel.Name = "ManageslaryIdlabel";
             this.ManageslaryIdlabel.Size = new System.Drawing.Size(16, 13);
             this.ManageslaryIdlabel.TabIndex = 11;
@@ -341,7 +341,7 @@ namespace BusRapidTransitManagement.Forms
             // ManageNewsalarylabel
             // 
             this.ManageNewsalarylabel.AutoSize = true;
-            this.ManageNewsalarylabel.Location = new System.Drawing.Point(23, 222);
+            this.ManageNewsalarylabel.Location = new System.Drawing.Point(23, 124);
             this.ManageNewsalarylabel.Name = "ManageNewsalarylabel";
             this.ManageNewsalarylabel.Size = new System.Drawing.Size(61, 13);
             this.ManageNewsalarylabel.TabIndex = 9;
@@ -350,9 +350,9 @@ namespace BusRapidTransitManagement.Forms
             // StuffControlgroupBox
             // 
             this.StuffControlgroupBox.Controls.Add(this.StuffControldataGridView);
-            this.StuffControlgroupBox.Location = new System.Drawing.Point(1050, 76);
+            this.StuffControlgroupBox.Location = new System.Drawing.Point(641, 41);
             this.StuffControlgroupBox.Name = "StuffControlgroupBox";
-            this.StuffControlgroupBox.Size = new System.Drawing.Size(382, 309);
+            this.StuffControlgroupBox.Size = new System.Drawing.Size(591, 309);
             this.StuffControlgroupBox.TabIndex = 19;
             this.StuffControlgroupBox.TabStop = false;
             this.StuffControlgroupBox.Text = "Stuff";
@@ -365,7 +365,7 @@ namespace BusRapidTransitManagement.Forms
             this.StuffControldataGridView.Location = new System.Drawing.Point(7, 30);
             this.StuffControldataGridView.Name = "StuffControldataGridView";
             this.StuffControldataGridView.ReadOnly = true;
-            this.StuffControldataGridView.Size = new System.Drawing.Size(369, 253);
+            this.StuffControldataGridView.Size = new System.Drawing.Size(578, 253);
             this.StuffControldataGridView.TabIndex = 0;
             // 
             // StuffInfoControl_manager_

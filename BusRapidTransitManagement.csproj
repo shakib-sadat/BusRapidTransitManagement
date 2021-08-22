@@ -50,9 +50,9 @@
     <Compile Include="Classes\Bus.cs" />
     <Compile Include="Classes\Destination.cs" />
     <Compile Include="Classes\Manager.cs" />
-    <Compile Include="Classes\Passenger.cs" />
     <Compile Include="Data Access\DataAccess.cs" />
     <Compile Include="Data Access\ManagerDataAccess.cs" />
+    <Compile Include="Data Access\StuffDataAccess.cs" />
     <Compile Include="Forms\BusInfo%28Manager%29.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,6 +76,18 @@
     </Compile>
     <Compile Include="Forms\Counters%28stuff%29.Designer.cs">
       <DependentUpon>Counters%28stuff%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HomePageStuff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\HomePageStuff.Designer.cs">
+      <DependentUpon>HomePageStuff.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -146,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Counters%28stuff%29.resx">
       <DependentUpon>Counters%28stuff%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomePageStuff.resx">
+      <DependentUpon>HomePageStuff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

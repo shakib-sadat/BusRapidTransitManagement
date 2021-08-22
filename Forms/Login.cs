@@ -80,6 +80,7 @@ namespace BusRapidTransitManagement.Forms
 
         private void StuffLoginbutton_Click(object sender, EventArgs e)
         {
+            StuffDataAccess stuffDataAccess = new StuffDataAccess();
                 if (StuffUsertextBox.Text == "")
                 {
                     MessageBox.Show("Enter an user ID");
@@ -90,10 +91,10 @@ namespace BusRapidTransitManagement.Forms
                 }
                 else
                 {
-                    if (StuffUsertextBox.Text == "111" && StuffPasswordtextBox.Text == "111")
+                    if (stuffDataAccess.LoginValidationStuff(Convert.ToInt32(StuffUsertextBox.Text), StuffPasswordtextBox.Text))
                     {
                         MessageBox.Show("Logged in as a Stuff");
-                        StuffInterface stuffinterface = new StuffInterface();
+                        StuffInterface stuffinterface = new StuffInterface(Convert.ToInt32(StuffUsertextBox.Text));
                         stuffinterface.Show();
                         this.Hide();
                         //this.Close();

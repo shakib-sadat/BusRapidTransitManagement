@@ -29,151 +29,191 @@ namespace BusRapidTransitManagement.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.stuffNameinfolabel = new System.Windows.Forms.Label();
-            this.stuffIdinfolabel = new System.Windows.Forms.Label();
-            this.stuffPasswordinfolabel = new System.Windows.Forms.Label();
-            this.stuffcontactinfolabel = new System.Windows.Forms.Label();
-            this.stuffEmailinfolabel = new System.Windows.Forms.Label();
-            this.stuffnameinfotextBox = new System.Windows.Forms.TextBox();
-            this.stuffPasswordinfotextBox = new System.Windows.Forms.TextBox();
-            this.stuffContactinfotextBox = new System.Windows.Forms.TextBox();
-            this.stuffEmailinfotextBox = new System.Windows.Forms.TextBox();
-            this.stuffIdinfotextBox = new System.Windows.Forms.TextBox();
-            this.stuffUpdateinfobutton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.StuffinfomaleradioButton = new System.Windows.Forms.RadioButton();
+            this.StuffInfoFemaleradioButton = new System.Windows.Forms.RadioButton();
+            this.StuffAgeInfotextBox = new System.Windows.Forms.TextBox();
+            this.StuffAgeInfolabel = new System.Windows.Forms.Label();
+            this.StuffGenderinfolabel = new System.Windows.Forms.Label();
+            this.StuffEmailinfotextBox = new System.Windows.Forms.TextBox();
+            this.StuffContactinfotextBox = new System.Windows.Forms.TextBox();
+            this.StuffPasswordinfotextBox = new System.Windows.Forms.TextBox();
+            this.StuffNameinfotextBox = new System.Windows.Forms.TextBox();
+            this.StuffEmailinfolabel = new System.Windows.Forms.Label();
+            this.Stuffcontactinfolabel = new System.Windows.Forms.Label();
+            this.StuffPasswordinfolabel = new System.Windows.Forms.Label();
+            this.StuffNameinfolabel = new System.Windows.Forms.Label();
+            this.StuffinfoUpdatebutton = new System.Windows.Forms.Button();
+            this.StuffInfodataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.StuffInfodataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // stuffNameinfolabel
+            // StuffinfomaleradioButton
             // 
-            this.stuffNameinfolabel.AutoSize = true;
-            this.stuffNameinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffNameinfolabel.Location = new System.Drawing.Point(387, 107);
-            this.stuffNameinfolabel.Name = "stuffNameinfolabel";
-            this.stuffNameinfolabel.Size = new System.Drawing.Size(97, 23);
-            this.stuffNameinfolabel.TabIndex = 0;
-            this.stuffNameinfolabel.Text = "Stuff Name";
+            this.StuffinfomaleradioButton.AutoSize = true;
+            this.StuffinfomaleradioButton.Location = new System.Drawing.Point(287, 247);
+            this.StuffinfomaleradioButton.Name = "StuffinfomaleradioButton";
+            this.StuffinfomaleradioButton.Size = new System.Drawing.Size(48, 17);
+            this.StuffinfomaleradioButton.TabIndex = 44;
+            this.StuffinfomaleradioButton.TabStop = true;
+            this.StuffinfomaleradioButton.Text = "Male";
+            this.StuffinfomaleradioButton.UseVisualStyleBackColor = true;
             // 
-            // stuffIdinfolabel
+            // StuffInfoFemaleradioButton
             // 
-            this.stuffIdinfolabel.AutoSize = true;
-            this.stuffIdinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffIdinfolabel.Location = new System.Drawing.Point(387, 151);
-            this.stuffIdinfolabel.Name = "stuffIdinfolabel";
-            this.stuffIdinfolabel.Size = new System.Drawing.Size(75, 23);
-            this.stuffIdinfolabel.TabIndex = 1;
-            this.stuffIdinfolabel.Text = "Stuff Id";
+            this.StuffInfoFemaleradioButton.AutoSize = true;
+            this.StuffInfoFemaleradioButton.Location = new System.Drawing.Point(372, 247);
+            this.StuffInfoFemaleradioButton.Name = "StuffInfoFemaleradioButton";
+            this.StuffInfoFemaleradioButton.Size = new System.Drawing.Size(59, 17);
+            this.StuffInfoFemaleradioButton.TabIndex = 43;
+            this.StuffInfoFemaleradioButton.TabStop = true;
+            this.StuffInfoFemaleradioButton.Text = "Female";
+            this.StuffInfoFemaleradioButton.UseVisualStyleBackColor = true;
             // 
-            // stuffPasswordinfolabel
+            // StuffAgeInfotextBox
             // 
-            this.stuffPasswordinfolabel.AutoSize = true;
-            this.stuffPasswordinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffPasswordinfolabel.Location = new System.Drawing.Point(388, 327);
-            this.stuffPasswordinfolabel.Name = "stuffPasswordinfolabel";
-            this.stuffPasswordinfolabel.Size = new System.Drawing.Size(76, 23);
-            this.stuffPasswordinfolabel.TabIndex = 3;
-            this.stuffPasswordinfolabel.Text = "Password";
+            this.StuffAgeInfotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffAgeInfotextBox.Location = new System.Drawing.Point(287, 297);
+            this.StuffAgeInfotextBox.Name = "StuffAgeInfotextBox";
+            this.StuffAgeInfotextBox.Size = new System.Drawing.Size(100, 21);
+            this.StuffAgeInfotextBox.TabIndex = 42;
             // 
-            // stuffcontactinfolabel
+            // StuffAgeInfolabel
             // 
-            this.stuffcontactinfolabel.AutoSize = true;
-            this.stuffcontactinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffcontactinfolabel.Location = new System.Drawing.Point(387, 261);
-            this.stuffcontactinfolabel.Name = "stuffcontactinfolabel";
-            this.stuffcontactinfolabel.Size = new System.Drawing.Size(92, 23);
-            this.stuffcontactinfolabel.TabIndex = 4;
-            this.stuffcontactinfolabel.Text = "Contact No";
+            this.StuffAgeInfolabel.AutoSize = true;
+            this.StuffAgeInfolabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffAgeInfolabel.Location = new System.Drawing.Point(75, 293);
+            this.StuffAgeInfolabel.Name = "StuffAgeInfolabel";
+            this.StuffAgeInfolabel.Size = new System.Drawing.Size(45, 26);
+            this.StuffAgeInfolabel.TabIndex = 41;
+            this.StuffAgeInfolabel.Text = "Age";
             // 
-            // stuffEmailinfolabel
+            // StuffGenderinfolabel
             // 
-            this.stuffEmailinfolabel.AutoSize = true;
-            this.stuffEmailinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffEmailinfolabel.Location = new System.Drawing.Point(388, 200);
-            this.stuffEmailinfolabel.Name = "stuffEmailinfolabel";
-            this.stuffEmailinfolabel.Size = new System.Drawing.Size(96, 23);
-            this.stuffEmailinfolabel.TabIndex = 5;
-            this.stuffEmailinfolabel.Text = "Stuff Email";
+            this.StuffGenderinfolabel.AutoSize = true;
+            this.StuffGenderinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffGenderinfolabel.Location = new System.Drawing.Point(75, 240);
+            this.StuffGenderinfolabel.Name = "StuffGenderinfolabel";
+            this.StuffGenderinfolabel.Size = new System.Drawing.Size(75, 26);
+            this.StuffGenderinfolabel.TabIndex = 40;
+            this.StuffGenderinfolabel.Text = "Gender";
             // 
-            // stuffnameinfotextBox
+            // StuffEmailinfotextBox
             // 
-            this.stuffnameinfotextBox.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffnameinfotextBox.Location = new System.Drawing.Point(573, 107);
-            this.stuffnameinfotextBox.Name = "stuffnameinfotextBox";
-            this.stuffnameinfotextBox.Size = new System.Drawing.Size(100, 23);
-            this.stuffnameinfotextBox.TabIndex = 6;
+            this.StuffEmailinfotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffEmailinfotextBox.Location = new System.Drawing.Point(287, 127);
+            this.StuffEmailinfotextBox.Name = "StuffEmailinfotextBox";
+            this.StuffEmailinfotextBox.Size = new System.Drawing.Size(100, 21);
+            this.StuffEmailinfotextBox.TabIndex = 39;
             // 
-            // stuffPasswordinfotextBox
+            // StuffContactinfotextBox
             // 
-            this.stuffPasswordinfotextBox.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffPasswordinfotextBox.Location = new System.Drawing.Point(573, 327);
-            this.stuffPasswordinfotextBox.Name = "stuffPasswordinfotextBox";
-            this.stuffPasswordinfotextBox.PasswordChar = '*';
-            this.stuffPasswordinfotextBox.Size = new System.Drawing.Size(100, 23);
-            this.stuffPasswordinfotextBox.TabIndex = 8;
+            this.StuffContactinfotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffContactinfotextBox.Location = new System.Drawing.Point(287, 187);
+            this.StuffContactinfotextBox.Name = "StuffContactinfotextBox";
+            this.StuffContactinfotextBox.Size = new System.Drawing.Size(100, 21);
+            this.StuffContactinfotextBox.TabIndex = 38;
             // 
-            // stuffContactinfotextBox
+            // StuffPasswordinfotextBox
             // 
-            this.stuffContactinfotextBox.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffContactinfotextBox.Location = new System.Drawing.Point(573, 264);
-            this.stuffContactinfotextBox.Name = "stuffContactinfotextBox";
-            this.stuffContactinfotextBox.Size = new System.Drawing.Size(100, 23);
-            this.stuffContactinfotextBox.TabIndex = 9;
+            this.StuffPasswordinfotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffPasswordinfotextBox.Location = new System.Drawing.Point(287, 350);
+            this.StuffPasswordinfotextBox.Name = "StuffPasswordinfotextBox";
+            this.StuffPasswordinfotextBox.PasswordChar = '*';
+            this.StuffPasswordinfotextBox.Size = new System.Drawing.Size(100, 21);
+            this.StuffPasswordinfotextBox.TabIndex = 37;
             // 
-            // stuffEmailinfotextBox
+            // StuffNameinfotextBox
             // 
-            this.stuffEmailinfotextBox.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffEmailinfotextBox.Location = new System.Drawing.Point(573, 203);
-            this.stuffEmailinfotextBox.Name = "stuffEmailinfotextBox";
-            this.stuffEmailinfotextBox.Size = new System.Drawing.Size(100, 23);
-            this.stuffEmailinfotextBox.TabIndex = 10;
+            this.StuffNameinfotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffNameinfotextBox.Location = new System.Drawing.Point(287, 65);
+            this.StuffNameinfotextBox.Name = "StuffNameinfotextBox";
+            this.StuffNameinfotextBox.Size = new System.Drawing.Size(100, 21);
+            this.StuffNameinfotextBox.TabIndex = 36;
             // 
-            // stuffIdinfotextBox
+            // StuffEmailinfolabel
             // 
-            this.stuffIdinfotextBox.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffIdinfotextBox.Location = new System.Drawing.Point(573, 151);
-            this.stuffIdinfotextBox.Name = "stuffIdinfotextBox";
-            this.stuffIdinfotextBox.Size = new System.Drawing.Size(100, 23);
-            this.stuffIdinfotextBox.TabIndex = 11;
+            this.StuffEmailinfolabel.AutoSize = true;
+            this.StuffEmailinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffEmailinfolabel.Location = new System.Drawing.Point(74, 123);
+            this.StuffEmailinfolabel.Name = "StuffEmailinfolabel";
+            this.StuffEmailinfolabel.Size = new System.Drawing.Size(115, 26);
+            this.StuffEmailinfolabel.TabIndex = 35;
+            this.StuffEmailinfolabel.Text = "Stuff Email";
             // 
-            // stuffUpdateinfobutton
+            // Stuffcontactinfolabel
             // 
-            this.stuffUpdateinfobutton.BackColor = System.Drawing.Color.Olive;
-            this.stuffUpdateinfobutton.Font = new System.Drawing.Font("Lucida Sans Unicode", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuffUpdateinfobutton.Location = new System.Drawing.Point(478, 443);
-            this.stuffUpdateinfobutton.Name = "stuffUpdateinfobutton";
-            this.stuffUpdateinfobutton.Size = new System.Drawing.Size(123, 38);
-            this.stuffUpdateinfobutton.TabIndex = 12;
-            this.stuffUpdateinfobutton.Text = "Update";
-            this.stuffUpdateinfobutton.UseVisualStyleBackColor = false;
+            this.Stuffcontactinfolabel.AutoSize = true;
+            this.Stuffcontactinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stuffcontactinfolabel.Location = new System.Drawing.Point(74, 183);
+            this.Stuffcontactinfolabel.Name = "Stuffcontactinfolabel";
+            this.Stuffcontactinfolabel.Size = new System.Drawing.Size(110, 26);
+            this.Stuffcontactinfolabel.TabIndex = 34;
+            this.Stuffcontactinfolabel.Text = "Contact No";
             // 
-            // label1
+            // StuffPasswordinfolabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(444, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 23);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Edit Information";
+            this.StuffPasswordinfolabel.AutoSize = true;
+            this.StuffPasswordinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffPasswordinfolabel.Location = new System.Drawing.Point(75, 345);
+            this.StuffPasswordinfolabel.Name = "StuffPasswordinfolabel";
+            this.StuffPasswordinfolabel.Size = new System.Drawing.Size(94, 26);
+            this.StuffPasswordinfolabel.TabIndex = 33;
+            this.StuffPasswordinfolabel.Text = "Password";
+            // 
+            // StuffNameinfolabel
+            // 
+            this.StuffNameinfolabel.AutoSize = true;
+            this.StuffNameinfolabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffNameinfolabel.Location = new System.Drawing.Point(75, 65);
+            this.StuffNameinfolabel.Name = "StuffNameinfolabel";
+            this.StuffNameinfolabel.Size = new System.Drawing.Size(119, 26);
+            this.StuffNameinfolabel.TabIndex = 32;
+            this.StuffNameinfolabel.Text = "Stuff Name";
+            // 
+            // StuffinfoUpdatebutton
+            // 
+            this.StuffinfoUpdatebutton.Location = new System.Drawing.Point(242, 434);
+            this.StuffinfoUpdatebutton.Name = "StuffinfoUpdatebutton";
+            this.StuffinfoUpdatebutton.Size = new System.Drawing.Size(75, 23);
+            this.StuffinfoUpdatebutton.TabIndex = 45;
+            this.StuffinfoUpdatebutton.Text = "Update";
+            this.StuffinfoUpdatebutton.UseVisualStyleBackColor = true;
+            this.StuffinfoUpdatebutton.Click += new System.EventHandler(this.StuffinfoUpdatebutton_Click);
+            // 
+            // StuffInfodataGridView
+            // 
+            this.StuffInfodataGridView.AllowUserToAddRows = false;
+            this.StuffInfodataGridView.AllowUserToDeleteRows = false;
+            this.StuffInfodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StuffInfodataGridView.Location = new System.Drawing.Point(437, 65);
+            this.StuffInfodataGridView.Name = "StuffInfodataGridView";
+            this.StuffInfodataGridView.ReadOnly = true;
+            this.StuffInfodataGridView.Size = new System.Drawing.Size(547, 458);
+            this.StuffInfodataGridView.TabIndex = 46;
             // 
             // StuffEditInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightYellow;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.stuffUpdateinfobutton);
-            this.Controls.Add(this.stuffIdinfotextBox);
-            this.Controls.Add(this.stuffEmailinfotextBox);
-            this.Controls.Add(this.stuffContactinfotextBox);
-            this.Controls.Add(this.stuffPasswordinfotextBox);
-            this.Controls.Add(this.stuffnameinfotextBox);
-            this.Controls.Add(this.stuffEmailinfolabel);
-            this.Controls.Add(this.stuffcontactinfolabel);
-            this.Controls.Add(this.stuffPasswordinfolabel);
-            this.Controls.Add(this.stuffIdinfolabel);
-            this.Controls.Add(this.stuffNameinfolabel);
+            this.Controls.Add(this.StuffInfodataGridView);
+            this.Controls.Add(this.StuffinfoUpdatebutton);
+            this.Controls.Add(this.StuffinfomaleradioButton);
+            this.Controls.Add(this.StuffInfoFemaleradioButton);
+            this.Controls.Add(this.StuffAgeInfotextBox);
+            this.Controls.Add(this.StuffAgeInfolabel);
+            this.Controls.Add(this.StuffGenderinfolabel);
+            this.Controls.Add(this.StuffEmailinfotextBox);
+            this.Controls.Add(this.StuffContactinfotextBox);
+            this.Controls.Add(this.StuffPasswordinfotextBox);
+            this.Controls.Add(this.StuffNameinfotextBox);
+            this.Controls.Add(this.StuffEmailinfolabel);
+            this.Controls.Add(this.Stuffcontactinfolabel);
+            this.Controls.Add(this.StuffPasswordinfolabel);
+            this.Controls.Add(this.StuffNameinfolabel);
             this.Name = "StuffEditInfo";
-            this.Size = new System.Drawing.Size(1139, 552);
+            this.Size = new System.Drawing.Size(1014, 566);
+            this.Load += new System.EventHandler(this.StuffEditInfo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.StuffInfodataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,17 +221,20 @@ namespace BusRapidTransitManagement.Forms
 
         #endregion
 
-        private System.Windows.Forms.Label stuffNameinfolabel;
-        private System.Windows.Forms.Label stuffIdinfolabel;
-        private System.Windows.Forms.Label stuffPasswordinfolabel;
-        private System.Windows.Forms.Label stuffcontactinfolabel;
-        private System.Windows.Forms.Label stuffEmailinfolabel;
-        private System.Windows.Forms.TextBox stuffnameinfotextBox;
-        private System.Windows.Forms.TextBox stuffPasswordinfotextBox;
-        private System.Windows.Forms.TextBox stuffContactinfotextBox;
-        private System.Windows.Forms.TextBox stuffEmailinfotextBox;
-        private System.Windows.Forms.TextBox stuffIdinfotextBox;
-        private System.Windows.Forms.Button stuffUpdateinfobutton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton StuffinfomaleradioButton;
+        private System.Windows.Forms.RadioButton StuffInfoFemaleradioButton;
+        private System.Windows.Forms.TextBox StuffAgeInfotextBox;
+        private System.Windows.Forms.Label StuffAgeInfolabel;
+        private System.Windows.Forms.Label StuffGenderinfolabel;
+        private System.Windows.Forms.TextBox StuffEmailinfotextBox;
+        private System.Windows.Forms.TextBox StuffContactinfotextBox;
+        private System.Windows.Forms.TextBox StuffPasswordinfotextBox;
+        private System.Windows.Forms.TextBox StuffNameinfotextBox;
+        private System.Windows.Forms.Label StuffEmailinfolabel;
+        private System.Windows.Forms.Label Stuffcontactinfolabel;
+        private System.Windows.Forms.Label StuffPasswordinfolabel;
+        private System.Windows.Forms.Label StuffNameinfolabel;
+        private System.Windows.Forms.Button StuffinfoUpdatebutton;
+        private System.Windows.Forms.DataGridView StuffInfodataGridView;
     }
 }

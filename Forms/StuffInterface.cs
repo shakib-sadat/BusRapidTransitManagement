@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusRapidTransitManagement.Data_Access;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,21 @@ namespace BusRapidTransitManagement.Forms
 {
     public partial class StuffInterface : Form
     {
-        public StuffInterface()
+        public int stuffInterfaceid;
+        public StuffInterface(int id)
         {
             InitializeComponent();
+            this.stuffInterfaceid = id;
         }
 
         
 
         private void StuffInterface_Load(object sender, EventArgs e)
         {
+            StuffDataAccess stuffDataAccess = new StuffDataAccess();
+            HomePageStuff homePagestuff = new HomePageStuff();
+            stuffhomepanel.Controls.Clear();
+            stuffhomepanel.Controls.Add(homePagestuff);
             
         }
 
@@ -61,7 +68,7 @@ namespace BusRapidTransitManagement.Forms
         {
             
             stuffhomepanel.Controls.Clear();
-            stuffhomepanel.Controls.Add(new StuffEditInfo());
+            stuffhomepanel.Controls.Add(new StuffEditInfo(this.stuffInterfaceid));
         }
 
         private void stuffhomepanel_Paint(object sender, PaintEventArgs e)
@@ -98,6 +105,15 @@ namespace BusRapidTransitManagement.Forms
             login.Show();
             this.Hide();*/
             Application.Exit();
+        }
+
+        private void RefreshStuffbutton_Click(object sender, EventArgs e)
+        {
+            
+            HomePageStuff homePagestuff = new HomePageStuff();
+            stuffhomepanel.Controls.Clear();
+            stuffhomepanel.Controls.Add(homePagestuff);
+            
         }
     }
 }

@@ -39,6 +39,7 @@ namespace BusRapidTransitManagement.Forms
             this.managereditinfobutton = new System.Windows.Forms.Button();
             this.ManagerIHomepagepanel = new System.Windows.Forms.Panel();
             this.Stuffinformationupdatebutton = new System.Windows.Forms.Button();
+            this.Refreshbutton = new System.Windows.Forms.Button();
             this.managerLogoutpanel.SuspendLayout();
             this.ManagerIHomepagepanel.SuspendLayout();
             this.SuspendLayout();
@@ -46,9 +47,9 @@ namespace BusRapidTransitManagement.Forms
             // Managerhomepanel
             // 
             this.Managerhomepanel.BackColor = System.Drawing.Color.DarkCyan;
-            this.Managerhomepanel.Location = new System.Drawing.Point(206, 89);
+            this.Managerhomepanel.Location = new System.Drawing.Point(206, 120);
             this.Managerhomepanel.Name = "Managerhomepanel";
-            this.Managerhomepanel.Size = new System.Drawing.Size(1354, 589);
+            this.Managerhomepanel.Size = new System.Drawing.Size(1354, 558);
             this.Managerhomepanel.TabIndex = 5;
             // 
             // label1
@@ -62,7 +63,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             // managerCountersbutton
             // 
-            this.managerCountersbutton.Location = new System.Drawing.Point(915, 27);
+            this.managerCountersbutton.Location = new System.Drawing.Point(862, 27);
             this.managerCountersbutton.Name = "managerCountersbutton";
             this.managerCountersbutton.Size = new System.Drawing.Size(132, 32);
             this.managerCountersbutton.TabIndex = 8;
@@ -72,7 +73,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             // managerBusInformationbutton
             // 
-            this.managerBusInformationbutton.Location = new System.Drawing.Point(696, 27);
+            this.managerBusInformationbutton.Location = new System.Drawing.Point(665, 27);
             this.managerBusInformationbutton.Name = "managerBusInformationbutton";
             this.managerBusInformationbutton.Size = new System.Drawing.Size(128, 32);
             this.managerBusInformationbutton.TabIndex = 6;
@@ -92,7 +93,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             // managerLogoutbutton
             // 
-            this.managerLogoutbutton.Location = new System.Drawing.Point(28, 377);
+            this.managerLogoutbutton.Location = new System.Drawing.Point(28, 534);
             this.managerLogoutbutton.Name = "managerLogoutbutton";
             this.managerLogoutbutton.Size = new System.Drawing.Size(116, 32);
             this.managerLogoutbutton.TabIndex = 6;
@@ -113,7 +114,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             // managereditinfobutton
             // 
-            this.managereditinfobutton.Location = new System.Drawing.Point(28, 251);
+            this.managereditinfobutton.Location = new System.Drawing.Point(28, 437);
             this.managereditinfobutton.Name = "managereditinfobutton";
             this.managereditinfobutton.Size = new System.Drawing.Size(116, 32);
             this.managereditinfobutton.TabIndex = 7;
@@ -145,11 +146,22 @@ namespace BusRapidTransitManagement.Forms
             this.Stuffinformationupdatebutton.UseVisualStyleBackColor = true;
             this.Stuffinformationupdatebutton.Click += new System.EventHandler(this.Stuffinformationupdatebutton_Click);
             // 
+            // Refreshbutton
+            // 
+            this.Refreshbutton.Location = new System.Drawing.Point(1508, 89);
+            this.Refreshbutton.Name = "Refreshbutton";
+            this.Refreshbutton.Size = new System.Drawing.Size(40, 23);
+            this.Refreshbutton.TabIndex = 6;
+            this.Refreshbutton.Text = "X";
+            this.Refreshbutton.UseVisualStyleBackColor = true;
+            this.Refreshbutton.Click += new System.EventHandler(this.Refreshbutton_Click);
+            // 
             // ManagerInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1560, 678);
+            this.Controls.Add(this.Refreshbutton);
             this.Controls.Add(this.Managerhomepanel);
             this.Controls.Add(this.managerLogoutpanel);
             this.Controls.Add(this.ManagerIHomepagepanel);
@@ -157,6 +169,7 @@ namespace BusRapidTransitManagement.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerInterface";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagerInterface_FormClosing);
+            this.Load += new System.EventHandler(this.ManagerInterface_Load);
             this.managerLogoutpanel.ResumeLayout(false);
             this.ManagerIHomepagepanel.ResumeLayout(false);
             this.ManagerIHomepagepanel.PerformLayout();
@@ -176,5 +189,6 @@ namespace BusRapidTransitManagement.Forms
         private System.Windows.Forms.Button managereditinfobutton;
         private System.Windows.Forms.Panel ManagerIHomepagepanel;
         private System.Windows.Forms.Button Stuffinformationupdatebutton;
+        private System.Windows.Forms.Button Refreshbutton;
     }
 }

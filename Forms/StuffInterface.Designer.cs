@@ -39,6 +39,7 @@ namespace BusRapidTransitManagement.Forms
             this.StuffLogoutpanel = new System.Windows.Forms.Panel();
             this.StuffEditinfobutton = new System.Windows.Forms.Button();
             this.stuffhomepanel = new System.Windows.Forms.Panel();
+            this.RefreshStuffbutton = new System.Windows.Forms.Button();
             this.StuffIHomepagepanel.SuspendLayout();
             this.StuffLogoutpanel.SuspendLayout();
             this.SuspendLayout();
@@ -153,17 +154,28 @@ namespace BusRapidTransitManagement.Forms
             // 
             // stuffhomepanel
             // 
-            this.stuffhomepanel.Location = new System.Drawing.Point(206, 122);
+            this.stuffhomepanel.Location = new System.Drawing.Point(206, 154);
             this.stuffhomepanel.Name = "stuffhomepanel";
-            this.stuffhomepanel.Size = new System.Drawing.Size(1139, 552);
+            this.stuffhomepanel.Size = new System.Drawing.Size(1151, 532);
             this.stuffhomepanel.TabIndex = 2;
             this.stuffhomepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.stuffhomepanel_Paint);
+            // 
+            // RefreshStuffbutton
+            // 
+            this.RefreshStuffbutton.Location = new System.Drawing.Point(1309, 125);
+            this.RefreshStuffbutton.Name = "RefreshStuffbutton";
+            this.RefreshStuffbutton.Size = new System.Drawing.Size(36, 23);
+            this.RefreshStuffbutton.TabIndex = 3;
+            this.RefreshStuffbutton.Text = "X";
+            this.RefreshStuffbutton.UseVisualStyleBackColor = true;
+            this.RefreshStuffbutton.Click += new System.EventHandler(this.RefreshStuffbutton_Click);
             // 
             // StuffInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1357, 686);
+            this.Controls.Add(this.RefreshStuffbutton);
             this.Controls.Add(this.StuffLogoutpanel);
             this.Controls.Add(this.stuffhomepanel);
             this.Controls.Add(this.StuffIHomepagepanel);
@@ -191,5 +203,6 @@ namespace BusRapidTransitManagement.Forms
         private System.Windows.Forms.Panel StuffLogoutpanel;
         private System.Windows.Forms.Panel stuffhomepanel;
         private System.Windows.Forms.Button StuffEditinfobutton;
+        private System.Windows.Forms.Button RefreshStuffbutton;
     }
 }
