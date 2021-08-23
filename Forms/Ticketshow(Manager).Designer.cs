@@ -29,6 +29,7 @@ namespace BusRapidTransitManagement.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ticketshow_Manager_));
             this.TicketbookManagerpanel = new System.Windows.Forms.Panel();
             this.CancelTicketManagerbutton = new System.Windows.Forms.Button();
             this.BookTicketManagerbutton = new System.Windows.Forms.Button();
@@ -60,6 +61,10 @@ namespace BusRapidTransitManagement.Forms
             this.TicketgroupBox = new System.Windows.Forms.GroupBox();
             this.BusShowdataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.TicketCountManagerlabel = new System.Windows.Forms.Label();
+            this.BusCountlabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.TicketbookManagerpanel.SuspendLayout();
             this.CancelTicketManagerpanel.SuspendLayout();
             this.BookTicketManagerpanel.SuspendLayout();
@@ -71,42 +76,48 @@ namespace BusRapidTransitManagement.Forms
             // 
             // TicketbookManagerpanel
             // 
-            this.TicketbookManagerpanel.BackColor = System.Drawing.Color.SlateBlue;
+            this.TicketbookManagerpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(59)))));
             this.TicketbookManagerpanel.Controls.Add(this.CancelTicketManagerbutton);
             this.TicketbookManagerpanel.Controls.Add(this.BookTicketManagerbutton);
             this.TicketbookManagerpanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.TicketbookManagerpanel.Location = new System.Drawing.Point(0, 0);
             this.TicketbookManagerpanel.Name = "TicketbookManagerpanel";
-            this.TicketbookManagerpanel.Size = new System.Drawing.Size(200, 586);
+            this.TicketbookManagerpanel.Size = new System.Drawing.Size(200, 615);
             this.TicketbookManagerpanel.TabIndex = 0;
             // 
             // CancelTicketManagerbutton
             // 
-            this.CancelTicketManagerbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CancelTicketManagerbutton.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelTicketManagerbutton.Location = new System.Drawing.Point(37, 337);
+            this.CancelTicketManagerbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(59)))));
+            this.CancelTicketManagerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelTicketManagerbutton.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelTicketManagerbutton.Image = ((System.Drawing.Image)(resources.GetObject("CancelTicketManagerbutton.Image")));
+            this.CancelTicketManagerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CancelTicketManagerbutton.Location = new System.Drawing.Point(0, 337);
             this.CancelTicketManagerbutton.Name = "CancelTicketManagerbutton";
-            this.CancelTicketManagerbutton.Size = new System.Drawing.Size(127, 44);
+            this.CancelTicketManagerbutton.Size = new System.Drawing.Size(200, 50);
             this.CancelTicketManagerbutton.TabIndex = 9;
-            this.CancelTicketManagerbutton.Text = "Cancel Ticket";
+            this.CancelTicketManagerbutton.Text = "    Cancel Ticket";
             this.CancelTicketManagerbutton.UseVisualStyleBackColor = false;
             this.CancelTicketManagerbutton.Click += new System.EventHandler(this.CancelTicketManagerbutton_Click);
             // 
             // BookTicketManagerbutton
             // 
-            this.BookTicketManagerbutton.BackColor = System.Drawing.Color.Green;
-            this.BookTicketManagerbutton.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookTicketManagerbutton.Location = new System.Drawing.Point(37, 199);
+            this.BookTicketManagerbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(59)))));
+            this.BookTicketManagerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BookTicketManagerbutton.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BookTicketManagerbutton.Image = ((System.Drawing.Image)(resources.GetObject("BookTicketManagerbutton.Image")));
+            this.BookTicketManagerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BookTicketManagerbutton.Location = new System.Drawing.Point(3, 174);
             this.BookTicketManagerbutton.Name = "BookTicketManagerbutton";
-            this.BookTicketManagerbutton.Size = new System.Drawing.Size(127, 42);
+            this.BookTicketManagerbutton.Size = new System.Drawing.Size(197, 50);
             this.BookTicketManagerbutton.TabIndex = 8;
-            this.BookTicketManagerbutton.Text = "Book Ticket";
+            this.BookTicketManagerbutton.Text = "    Book Ticket";
             this.BookTicketManagerbutton.UseVisualStyleBackColor = false;
             this.BookTicketManagerbutton.Click += new System.EventHandler(this.BookTicketManagerbutton_Click);
             // 
             // CancelTicketManagerpanel
             // 
-            this.CancelTicketManagerpanel.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.CancelTicketManagerpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(59)))));
             this.CancelTicketManagerpanel.Controls.Add(this.CancelManagerTicketIdlabel);
             this.CancelTicketManagerpanel.Controls.Add(this.ConfirmCancelManagerbutton);
             this.CancelTicketManagerpanel.Controls.Add(this.CancelManagerTicketIdtextBox);
@@ -127,8 +138,9 @@ namespace BusRapidTransitManagement.Forms
             // 
             // ConfirmCancelManagerbutton
             // 
-            this.ConfirmCancelManagerbutton.BackColor = System.Drawing.Color.Crimson;
-            this.ConfirmCancelManagerbutton.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmCancelManagerbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(90)))), ((int)(((byte)(119)))));
+            this.ConfirmCancelManagerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ConfirmCancelManagerbutton.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmCancelManagerbutton.Location = new System.Drawing.Point(58, 69);
             this.ConfirmCancelManagerbutton.Name = "ConfirmCancelManagerbutton";
             this.ConfirmCancelManagerbutton.Size = new System.Drawing.Size(181, 51);
@@ -139,14 +151,15 @@ namespace BusRapidTransitManagement.Forms
             // 
             // CancelManagerTicketIdtextBox
             // 
+            this.CancelManagerTicketIdtextBox.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelManagerTicketIdtextBox.Location = new System.Drawing.Point(139, 27);
             this.CancelManagerTicketIdtextBox.Name = "CancelManagerTicketIdtextBox";
-            this.CancelManagerTicketIdtextBox.Size = new System.Drawing.Size(100, 20);
+            this.CancelManagerTicketIdtextBox.Size = new System.Drawing.Size(100, 24);
             this.CancelManagerTicketIdtextBox.TabIndex = 24;
             // 
             // BookTicketManagerpanel
             // 
-            this.BookTicketManagerpanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BookTicketManagerpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(59)))));
             this.BookTicketManagerpanel.Controls.Add(this.BusIdcomboBox);
             this.BookTicketManagerpanel.Controls.Add(this.ToManagercomboBox);
             this.BookTicketManagerpanel.Controls.Add(this.FromManagercomboBox);
@@ -174,45 +187,53 @@ namespace BusRapidTransitManagement.Forms
             // 
             // BusIdcomboBox
             // 
+            this.BusIdcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BusIdcomboBox.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BusIdcomboBox.FormattingEnabled = true;
-            this.BusIdcomboBox.Location = new System.Drawing.Point(240, 380);
+            this.BusIdcomboBox.Location = new System.Drawing.Point(249, 378);
             this.BusIdcomboBox.Name = "BusIdcomboBox";
-            this.BusIdcomboBox.Size = new System.Drawing.Size(121, 21);
+            this.BusIdcomboBox.Size = new System.Drawing.Size(121, 25);
             this.BusIdcomboBox.TabIndex = 47;
             this.BusIdcomboBox.SelectedIndexChanged += new System.EventHandler(this.BusIdcomboBox_SelectedIndexChanged);
             this.BusIdcomboBox.Click += new System.EventHandler(this.BusIdcomboBox_Click);
             // 
             // ToManagercomboBox
             // 
+            this.ToManagercomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ToManagercomboBox.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToManagercomboBox.FormattingEnabled = true;
-            this.ToManagercomboBox.Location = new System.Drawing.Point(240, 245);
+            this.ToManagercomboBox.Location = new System.Drawing.Point(250, 243);
             this.ToManagercomboBox.Name = "ToManagercomboBox";
-            this.ToManagercomboBox.Size = new System.Drawing.Size(121, 21);
+            this.ToManagercomboBox.Size = new System.Drawing.Size(121, 25);
             this.ToManagercomboBox.TabIndex = 46;
             this.ToManagercomboBox.SelectedIndexChanged += new System.EventHandler(this.ToManagercomboBox_SelectedIndexChanged);
             this.ToManagercomboBox.Click += new System.EventHandler(this.ToManagercomboBox_Click);
             // 
             // FromManagercomboBox
             // 
+            this.FromManagercomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FromManagercomboBox.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FromManagercomboBox.FormattingEnabled = true;
-            this.FromManagercomboBox.Location = new System.Drawing.Point(240, 148);
+            this.FromManagercomboBox.Location = new System.Drawing.Point(250, 148);
             this.FromManagercomboBox.Name = "FromManagercomboBox";
-            this.FromManagercomboBox.Size = new System.Drawing.Size(121, 21);
+            this.FromManagercomboBox.Size = new System.Drawing.Size(121, 25);
             this.FromManagercomboBox.TabIndex = 45;
             this.FromManagercomboBox.Click += new System.EventHandler(this.FromManagercomboBox_Click);
             // 
             // PricetextBox
             // 
-            this.PricetextBox.Location = new System.Drawing.Point(250, 431);
+            this.PricetextBox.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PricetextBox.Location = new System.Drawing.Point(250, 430);
             this.PricetextBox.Name = "PricetextBox";
-            this.PricetextBox.Size = new System.Drawing.Size(100, 20);
+            this.PricetextBox.Size = new System.Drawing.Size(120, 24);
             this.PricetextBox.TabIndex = 44;
+            this.PricetextBox.TextChanged += new System.EventHandler(this.PricetextBox_TextChanged);
             // 
             // Pricelabel
             // 
             this.Pricelabel.AutoSize = true;
             this.Pricelabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pricelabel.Location = new System.Drawing.Point(128, 431);
+            this.Pricelabel.Location = new System.Drawing.Point(123, 431);
             this.Pricelabel.Name = "Pricelabel";
             this.Pricelabel.Size = new System.Drawing.Size(47, 23);
             this.Pricelabel.TabIndex = 43;
@@ -220,9 +241,10 @@ namespace BusRapidTransitManagement.Forms
             // 
             // PassengerNameManagertextBox
             // 
+            this.PassengerNameManagertextBox.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassengerNameManagertextBox.Location = new System.Drawing.Point(250, 52);
             this.PassengerNameManagertextBox.Name = "PassengerNameManagertextBox";
-            this.PassengerNameManagertextBox.Size = new System.Drawing.Size(100, 20);
+            this.PassengerNameManagertextBox.Size = new System.Drawing.Size(121, 24);
             this.PassengerNameManagertextBox.TabIndex = 31;
             // 
             // PassengerNameManagerlabel
@@ -247,10 +269,11 @@ namespace BusRapidTransitManagement.Forms
             // 
             // DepartureManagerdateTimePicker
             // 
+            this.DepartureManagerdateTimePicker.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DepartureManagerdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DepartureManagerdateTimePicker.Location = new System.Drawing.Point(250, 287);
+            this.DepartureManagerdateTimePicker.Location = new System.Drawing.Point(250, 285);
             this.DepartureManagerdateTimePicker.Name = "DepartureManagerdateTimePicker";
-            this.DepartureManagerdateTimePicker.Size = new System.Drawing.Size(111, 20);
+            this.DepartureManagerdateTimePicker.Size = new System.Drawing.Size(121, 24);
             this.DepartureManagerdateTimePicker.TabIndex = 38;
             // 
             // ContactNoManagerlabel
@@ -275,11 +298,12 @@ namespace BusRapidTransitManagement.Forms
             // 
             // TicketConfirmManagerbutton
             // 
-            this.TicketConfirmManagerbutton.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.TicketConfirmManagerbutton.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TicketConfirmManagerbutton.Location = new System.Drawing.Point(232, 468);
+            this.TicketConfirmManagerbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(90)))), ((int)(((byte)(119)))));
+            this.TicketConfirmManagerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.TicketConfirmManagerbutton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TicketConfirmManagerbutton.Location = new System.Drawing.Point(198, 489);
             this.TicketConfirmManagerbutton.Name = "TicketConfirmManagerbutton";
-            this.TicketConfirmManagerbutton.Size = new System.Drawing.Size(129, 32);
+            this.TicketConfirmManagerbutton.Size = new System.Drawing.Size(129, 36);
             this.TicketConfirmManagerbutton.TabIndex = 30;
             this.TicketConfirmManagerbutton.Text = "Confirm";
             this.TicketConfirmManagerbutton.UseVisualStyleBackColor = false;
@@ -289,7 +313,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.ToManagerlabel.AutoSize = true;
             this.ToManagerlabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToManagerlabel.Location = new System.Drawing.Point(146, 245);
+            this.ToManagerlabel.Location = new System.Drawing.Point(128, 245);
             this.ToManagerlabel.Name = "ToManagerlabel";
             this.ToManagerlabel.Size = new System.Drawing.Size(29, 23);
             this.ToManagerlabel.TabIndex = 26;
@@ -307,9 +331,10 @@ namespace BusRapidTransitManagement.Forms
             // 
             // SeatNoManagertextBox
             // 
+            this.SeatNoManagertextBox.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeatNoManagertextBox.Location = new System.Drawing.Point(250, 197);
             this.SeatNoManagertextBox.Name = "SeatNoManagertextBox";
-            this.SeatNoManagertextBox.Size = new System.Drawing.Size(100, 20);
+            this.SeatNoManagertextBox.Size = new System.Drawing.Size(121, 24);
             this.SeatNoManagertextBox.TabIndex = 35;
             // 
             // DepartureDateManagerlabel
@@ -324,16 +349,17 @@ namespace BusRapidTransitManagement.Forms
             // 
             // DepartureTimeManagertextBox
             // 
-            this.DepartureTimeManagertextBox.Location = new System.Drawing.Point(255, 337);
+            this.DepartureTimeManagertextBox.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartureTimeManagertextBox.Location = new System.Drawing.Point(249, 334);
             this.DepartureTimeManagertextBox.Name = "DepartureTimeManagertextBox";
-            this.DepartureTimeManagertextBox.Size = new System.Drawing.Size(100, 20);
+            this.DepartureTimeManagertextBox.Size = new System.Drawing.Size(122, 24);
             this.DepartureTimeManagertextBox.TabIndex = 34;
             // 
             // BusIdManagerlabel
             // 
             this.BusIdManagerlabel.AutoSize = true;
             this.BusIdManagerlabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BusIdManagerlabel.Location = new System.Drawing.Point(128, 380);
+            this.BusIdManagerlabel.Location = new System.Drawing.Point(122, 380);
             this.BusIdManagerlabel.Name = "BusIdManagerlabel";
             this.BusIdManagerlabel.Size = new System.Drawing.Size(66, 23);
             this.BusIdManagerlabel.TabIndex = 29;
@@ -341,28 +367,31 @@ namespace BusRapidTransitManagement.Forms
             // 
             // ContactNoManagertextBox
             // 
+            this.ContactNoManagertextBox.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContactNoManagertextBox.Location = new System.Drawing.Point(250, 96);
             this.ContactNoManagertextBox.Name = "ContactNoManagertextBox";
-            this.ContactNoManagertextBox.Size = new System.Drawing.Size(100, 20);
+            this.ContactNoManagertextBox.Size = new System.Drawing.Size(121, 24);
             this.ContactNoManagertextBox.TabIndex = 32;
             // 
             // TicketInfodataGridView
             // 
             this.TicketInfodataGridView.AllowUserToAddRows = false;
             this.TicketInfodataGridView.AllowUserToDeleteRows = false;
+            this.TicketInfodataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.TicketInfodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TicketInfodataGridView.Location = new System.Drawing.Point(6, 17);
             this.TicketInfodataGridView.Name = "TicketInfodataGridView";
             this.TicketInfodataGridView.ReadOnly = true;
-            this.TicketInfodataGridView.Size = new System.Drawing.Size(519, 170);
+            this.TicketInfodataGridView.Size = new System.Drawing.Size(503, 170);
             this.TicketInfodataGridView.TabIndex = 0;
             // 
             // TicketgroupBox
             // 
             this.TicketgroupBox.Controls.Add(this.TicketInfodataGridView);
+            this.TicketgroupBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TicketgroupBox.Location = new System.Drawing.Point(784, 3);
             this.TicketgroupBox.Name = "TicketgroupBox";
-            this.TicketgroupBox.Size = new System.Drawing.Size(532, 193);
+            this.TicketgroupBox.Size = new System.Drawing.Size(516, 193);
             this.TicketgroupBox.TabIndex = 3;
             this.TicketgroupBox.TabStop = false;
             this.TicketgroupBox.Text = "Tickets";
@@ -371,34 +400,81 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.BusShowdataGridView.AllowUserToAddRows = false;
             this.BusShowdataGridView.AllowUserToDeleteRows = false;
+            this.BusShowdataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.BusShowdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BusShowdataGridView.Location = new System.Drawing.Point(7, 19);
+            this.BusShowdataGridView.Location = new System.Drawing.Point(6, 19);
             this.BusShowdataGridView.Name = "BusShowdataGridView";
             this.BusShowdataGridView.ReadOnly = true;
-            this.BusShowdataGridView.Size = new System.Drawing.Size(519, 184);
+            this.BusShowdataGridView.Size = new System.Drawing.Size(497, 184);
             this.BusShowdataGridView.TabIndex = 43;
             // 
             // groupBox
             // 
             this.groupBox.Controls.Add(this.BusShowdataGridView);
+            this.groupBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox.Location = new System.Drawing.Point(790, 347);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(550, 222);
+            this.groupBox.Size = new System.Drawing.Size(510, 222);
             this.groupBox.TabIndex = 43;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Buses ";
+            // 
+            // TicketCountManagerlabel
+            // 
+            this.TicketCountManagerlabel.AutoSize = true;
+            this.TicketCountManagerlabel.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TicketCountManagerlabel.Location = new System.Drawing.Point(1224, 202);
+            this.TicketCountManagerlabel.Name = "TicketCountManagerlabel";
+            this.TicketCountManagerlabel.Size = new System.Drawing.Size(79, 33);
+            this.TicketCountManagerlabel.TabIndex = 44;
+            this.TicketCountManagerlabel.Text = "label1";
+            // 
+            // BusCountlabel
+            // 
+            this.BusCountlabel.AutoSize = true;
+            this.BusCountlabel.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BusCountlabel.Location = new System.Drawing.Point(1224, 572);
+            this.BusCountlabel.Name = "BusCountlabel";
+            this.BusCountlabel.Size = new System.Drawing.Size(79, 33);
+            this.BusCountlabel.TabIndex = 45;
+            this.BusCountlabel.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1056, 202);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 33);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Ticket Count";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1046, 572);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 33);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Bus Counter";
             // 
             // Ticketshow_Manager_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(59)))));
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BusCountlabel);
+            this.Controls.Add(this.TicketCountManagerlabel);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.TicketgroupBox);
             this.Controls.Add(this.CancelTicketManagerpanel);
             this.Controls.Add(this.BookTicketManagerpanel);
             this.Controls.Add(this.TicketbookManagerpanel);
             this.Name = "Ticketshow_Manager_";
-            this.Size = new System.Drawing.Size(1367, 586);
+            this.Size = new System.Drawing.Size(1303, 615);
             this.Load += new System.EventHandler(this.Ticketshow_Manager__Load);
             this.TicketbookManagerpanel.ResumeLayout(false);
             this.CancelTicketManagerpanel.ResumeLayout(false);
@@ -410,6 +486,7 @@ namespace BusRapidTransitManagement.Forms
             ((System.ComponentModel.ISupportInitialize)(this.BusShowdataGridView)).EndInit();
             this.groupBox.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -446,5 +523,9 @@ namespace BusRapidTransitManagement.Forms
         private System.Windows.Forms.GroupBox TicketgroupBox;
         private System.Windows.Forms.DataGridView BusShowdataGridView;
         private System.Windows.Forms.GroupBox groupBox;
+        private System.Windows.Forms.Label TicketCountManagerlabel;
+        private System.Windows.Forms.Label BusCountlabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

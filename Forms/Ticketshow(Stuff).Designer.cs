@@ -34,10 +34,11 @@ namespace BusRapidTransitManagement.Forms
             this.CancelTicketbutton = new System.Windows.Forms.Button();
             this.BookTicketbutton = new System.Windows.Forms.Button();
             this.BookTicketpanel = new System.Windows.Forms.Panel();
-            this.CancelTicketpanel = new System.Windows.Forms.Panel();
-            this.CancelTicketIdlabel = new System.Windows.Forms.Label();
-            this.ConfirmCancelbutton = new System.Windows.Forms.Button();
-            this.CancelTicketIdtextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.FromcomboBox = new System.Windows.Forms.ComboBox();
+            this.TocomboBox = new System.Windows.Forms.ComboBox();
+            this.PriceStufftextBox = new System.Windows.Forms.TextBox();
+            this.Pricelabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.BusIdStuffcomboBox = new System.Windows.Forms.ComboBox();
@@ -55,15 +56,14 @@ namespace BusRapidTransitManagement.Forms
             this.ContactNolabel = new System.Windows.Forms.Label();
             this.Fromlabel = new System.Windows.Forms.Label();
             this.PassengerNamelabel = new System.Windows.Forms.Label();
-            this.PriceStufftextBox = new System.Windows.Forms.TextBox();
-            this.Pricelabel = new System.Windows.Forms.Label();
-            this.TocomboBox = new System.Windows.Forms.ComboBox();
-            this.FromcomboBox = new System.Windows.Forms.ComboBox();
+            this.CancelTicketpanel = new System.Windows.Forms.Panel();
+            this.CancelTicketIdlabel = new System.Windows.Forms.Label();
+            this.ConfirmCancelbutton = new System.Windows.Forms.Button();
+            this.CancelTicketIdtextBox = new System.Windows.Forms.TextBox();
             this.TicketgroupBox = new System.Windows.Forms.GroupBox();
             this.TicketInfoStuffdataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.BusShowStuffdataGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.Ticketbookingpanel.SuspendLayout();
             this.BookTicketpanel.SuspendLayout();
             this.CancelTicketpanel.SuspendLayout();
@@ -143,47 +143,52 @@ namespace BusRapidTransitManagement.Forms
             this.BookTicketpanel.Size = new System.Drawing.Size(499, 615);
             this.BookTicketpanel.TabIndex = 12;
             // 
-            // CancelTicketpanel
+            // label1
             // 
-            this.CancelTicketpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.CancelTicketpanel.Controls.Add(this.CancelTicketIdlabel);
-            this.CancelTicketpanel.Controls.Add(this.ConfirmCancelbutton);
-            this.CancelTicketpanel.Controls.Add(this.CancelTicketIdtextBox);
-            this.CancelTicketpanel.Location = new System.Drawing.Point(718, 217);
-            this.CancelTicketpanel.Name = "CancelTicketpanel";
-            this.CancelTicketpanel.Size = new System.Drawing.Size(556, 167);
-            this.CancelTicketpanel.TabIndex = 8;
-            this.CancelTicketpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CancelTicketpanel_Paint);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(163, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 38);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Book Ticket";
             // 
-            // CancelTicketIdlabel
+            // FromcomboBox
             // 
-            this.CancelTicketIdlabel.AutoSize = true;
-            this.CancelTicketIdlabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelTicketIdlabel.Location = new System.Drawing.Point(98, 27);
-            this.CancelTicketIdlabel.Name = "CancelTicketIdlabel";
-            this.CancelTicketIdlabel.Size = new System.Drawing.Size(84, 23);
-            this.CancelTicketIdlabel.TabIndex = 21;
-            this.CancelTicketIdlabel.Text = "Ticket ID";
+            this.FromcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FromcomboBox.FormattingEnabled = true;
+            this.FromcomboBox.Location = new System.Drawing.Point(280, 177);
+            this.FromcomboBox.Name = "FromcomboBox";
+            this.FromcomboBox.Size = new System.Drawing.Size(128, 21);
+            this.FromcomboBox.TabIndex = 48;
+            this.FromcomboBox.Click += new System.EventHandler(this.FromcomboBox_Click);
             // 
-            // ConfirmCancelbutton
+            // TocomboBox
             // 
-            this.ConfirmCancelbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(86)))));
-            this.ConfirmCancelbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ConfirmCancelbutton.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmCancelbutton.Location = new System.Drawing.Point(173, 100);
-            this.ConfirmCancelbutton.Name = "ConfirmCancelbutton";
-            this.ConfirmCancelbutton.Size = new System.Drawing.Size(181, 51);
-            this.ConfirmCancelbutton.TabIndex = 8;
-            this.ConfirmCancelbutton.Text = "Confirm Cancellation";
-            this.ConfirmCancelbutton.UseVisualStyleBackColor = false;
-            this.ConfirmCancelbutton.Click += new System.EventHandler(this.ConfirmCancelbutton_Click);
+            this.TocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TocomboBox.FormattingEnabled = true;
+            this.TocomboBox.Location = new System.Drawing.Point(280, 273);
+            this.TocomboBox.Name = "TocomboBox";
+            this.TocomboBox.Size = new System.Drawing.Size(128, 21);
+            this.TocomboBox.TabIndex = 47;
+            this.TocomboBox.Click += new System.EventHandler(this.TocomboBox_Click);
             // 
-            // CancelTicketIdtextBox
+            // PriceStufftextBox
             // 
-            this.CancelTicketIdtextBox.Location = new System.Drawing.Point(201, 27);
-            this.CancelTicketIdtextBox.Name = "CancelTicketIdtextBox";
-            this.CancelTicketIdtextBox.Size = new System.Drawing.Size(128, 20);
-            this.CancelTicketIdtextBox.TabIndex = 17;
+            this.PriceStufftextBox.Location = new System.Drawing.Point(280, 471);
+            this.PriceStufftextBox.Name = "PriceStufftextBox";
+            this.PriceStufftextBox.Size = new System.Drawing.Size(128, 20);
+            this.PriceStufftextBox.TabIndex = 46;
+            // 
+            // Pricelabel
+            // 
+            this.Pricelabel.AutoSize = true;
+            this.Pricelabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pricelabel.Location = new System.Drawing.Point(70, 467);
+            this.Pricelabel.Name = "Pricelabel";
+            this.Pricelabel.Size = new System.Drawing.Size(47, 23);
+            this.Pricelabel.TabIndex = 45;
+            this.Pricelabel.Text = "Price";
             // 
             // button2
             // 
@@ -211,6 +216,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             // BusIdStuffcomboBox
             // 
+            this.BusIdStuffcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BusIdStuffcomboBox.FormattingEnabled = true;
             this.BusIdStuffcomboBox.Location = new System.Drawing.Point(280, 418);
             this.BusIdStuffcomboBox.Name = "BusIdStuffcomboBox";
@@ -348,40 +354,47 @@ namespace BusRapidTransitManagement.Forms
             this.PassengerNamelabel.TabIndex = 0;
             this.PassengerNamelabel.Text = "PassengerName";
             // 
-            // PriceStufftextBox
+            // CancelTicketpanel
             // 
-            this.PriceStufftextBox.Location = new System.Drawing.Point(280, 471);
-            this.PriceStufftextBox.Name = "PriceStufftextBox";
-            this.PriceStufftextBox.Size = new System.Drawing.Size(128, 20);
-            this.PriceStufftextBox.TabIndex = 46;
+            this.CancelTicketpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.CancelTicketpanel.Controls.Add(this.CancelTicketIdlabel);
+            this.CancelTicketpanel.Controls.Add(this.ConfirmCancelbutton);
+            this.CancelTicketpanel.Controls.Add(this.CancelTicketIdtextBox);
+            this.CancelTicketpanel.Location = new System.Drawing.Point(718, 217);
+            this.CancelTicketpanel.Name = "CancelTicketpanel";
+            this.CancelTicketpanel.Size = new System.Drawing.Size(556, 167);
+            this.CancelTicketpanel.TabIndex = 8;
+            this.CancelTicketpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CancelTicketpanel_Paint);
             // 
-            // Pricelabel
+            // CancelTicketIdlabel
             // 
-            this.Pricelabel.AutoSize = true;
-            this.Pricelabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pricelabel.Location = new System.Drawing.Point(70, 467);
-            this.Pricelabel.Name = "Pricelabel";
-            this.Pricelabel.Size = new System.Drawing.Size(47, 23);
-            this.Pricelabel.TabIndex = 45;
-            this.Pricelabel.Text = "Price";
+            this.CancelTicketIdlabel.AutoSize = true;
+            this.CancelTicketIdlabel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelTicketIdlabel.Location = new System.Drawing.Point(98, 27);
+            this.CancelTicketIdlabel.Name = "CancelTicketIdlabel";
+            this.CancelTicketIdlabel.Size = new System.Drawing.Size(84, 23);
+            this.CancelTicketIdlabel.TabIndex = 21;
+            this.CancelTicketIdlabel.Text = "Ticket ID";
             // 
-            // TocomboBox
+            // ConfirmCancelbutton
             // 
-            this.TocomboBox.FormattingEnabled = true;
-            this.TocomboBox.Location = new System.Drawing.Point(280, 273);
-            this.TocomboBox.Name = "TocomboBox";
-            this.TocomboBox.Size = new System.Drawing.Size(128, 21);
-            this.TocomboBox.TabIndex = 47;
-            this.TocomboBox.Click += new System.EventHandler(this.TocomboBox_Click);
+            this.ConfirmCancelbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(52)))), ((int)(((byte)(86)))));
+            this.ConfirmCancelbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ConfirmCancelbutton.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmCancelbutton.Location = new System.Drawing.Point(173, 100);
+            this.ConfirmCancelbutton.Name = "ConfirmCancelbutton";
+            this.ConfirmCancelbutton.Size = new System.Drawing.Size(181, 51);
+            this.ConfirmCancelbutton.TabIndex = 8;
+            this.ConfirmCancelbutton.Text = "Confirm Cancellation";
+            this.ConfirmCancelbutton.UseVisualStyleBackColor = false;
+            this.ConfirmCancelbutton.Click += new System.EventHandler(this.ConfirmCancelbutton_Click);
             // 
-            // FromcomboBox
+            // CancelTicketIdtextBox
             // 
-            this.FromcomboBox.FormattingEnabled = true;
-            this.FromcomboBox.Location = new System.Drawing.Point(280, 177);
-            this.FromcomboBox.Name = "FromcomboBox";
-            this.FromcomboBox.Size = new System.Drawing.Size(128, 21);
-            this.FromcomboBox.TabIndex = 48;
-            this.FromcomboBox.Click += new System.EventHandler(this.FromcomboBox_Click);
+            this.CancelTicketIdtextBox.Location = new System.Drawing.Point(201, 27);
+            this.CancelTicketIdtextBox.Name = "CancelTicketIdtextBox";
+            this.CancelTicketIdtextBox.Size = new System.Drawing.Size(128, 20);
+            this.CancelTicketIdtextBox.TabIndex = 17;
             // 
             // TicketgroupBox
             // 
@@ -428,16 +441,6 @@ namespace BusRapidTransitManagement.Forms
             this.BusShowStuffdataGridView.ReadOnly = true;
             this.BusShowStuffdataGridView.Size = new System.Drawing.Size(537, 184);
             this.BusShowStuffdataGridView.TabIndex = 43;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 38);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Book Ticket";
             // 
             // Ticketshow_Stuff_
             // 

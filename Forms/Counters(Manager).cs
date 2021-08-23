@@ -25,11 +25,23 @@ namespace BusRapidTransitManagement.Forms
             UpdateGridView();
         }
 
+        public void ClearFields()
+        {
+            RemoveCountertextBox.Text = string.Empty;
+            AddCountertextBox.Text = string.Empty;
+        }
+
         public void UpdateGridView()
         {
+            int count = 0;
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
             if (managerDataAccess.GetDestinations() != null)
                 CountersManagerdataGridView.DataSource = managerDataAccess.GetDestinations();
+            for (int i = 0; i < CountersManagerdataGridView.Rows.Count; i++)
+            {
+                count++;
+            }
+            CounterCountlabel.Text = Convert.ToString(count);
         }
 
         private void AddCounterbutton_Click(object sender, EventArgs e)

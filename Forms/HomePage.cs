@@ -13,25 +13,37 @@ namespace BusRapidTransitManagement.Forms
 {
     public partial class HomePage : UserControl
     {
+        
         public HomePage()
         {
             InitializeComponent();
+            
+            
         }
+
+        
+
 
         private void HomePage_Load(object sender, EventArgs e)
         {
+            BusInfo_Manager_ busInfo_Manager_ = new BusInfo_Manager_();
+            
+            
+
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
             if (managerDataAccess.GetTotalTicketSales() - managerDataAccess.GetTotalSalary() > 0)
             {
-                Profitlabel.Text = "Profit = " + Convert.ToString(managerDataAccess.GetTotalTicketSales() - managerDataAccess.GetTotalSalary());
+                Profitlabel.Text = "" + Convert.ToString(managerDataAccess.GetTotalTicketSales() - managerDataAccess.GetTotalSalary());
             }
             else
-                Profitlabel.Text = "Loss = " + Convert.ToString(managerDataAccess.GetTotalTicketSales() - managerDataAccess.GetTotalSalary());
+                Profitlabel.Text = "" + Convert.ToString(managerDataAccess.GetTotalTicketSales() - managerDataAccess.GetTotalSalary());
 
-            TicketSelllabel.Text = "Total Ticket Sell = " + Convert.ToString(managerDataAccess.GetTotalTicketSales());
-            TotalSalarylabel.Text = "Total Stuff Salary = " + Convert.ToString(managerDataAccess.GetTotalSalary());
+            TicketSelllabel.Text = "" + Convert.ToString(managerDataAccess.GetTotalTicketSales());
+            TotalSalarylabel.Text = "" + Convert.ToString(managerDataAccess.GetTotalSalary());
 
-            TicketSellCountlabel.Text = "Total Tickets Sale Profit Today: "+Convert.ToString(managerDataAccess.CalculateTicketSaleByDate(DateTime.Today.ToString("M/dd/yyyy")));
+            TicketSellCountlabel.Text = ""+Convert.ToString(managerDataAccess.CalculateTicketSaleByDate(DateTime.Today.ToString("M/dd/yyyy")));
+            
+            
         }
 
         private void Profitlabel_Click(object sender, EventArgs e)
@@ -40,6 +52,11 @@ namespace BusRapidTransitManagement.Forms
         }
 
         private void TotalSalarylabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Buslabel_Click(object sender, EventArgs e)
         {
 
         }

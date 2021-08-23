@@ -32,7 +32,7 @@ namespace BusRapidTransitManagement.Forms
             TimetextBox.Text = string.Empty;
             BusIdStuffcomboBox.Text = string.Empty;
 
-
+            CancelTicketIdtextBox.Text = string.Empty;
             PriceStufftextBox.Text = string.Empty;
         }
 
@@ -122,39 +122,57 @@ namespace BusRapidTransitManagement.Forms
             }
 
 
+
             else if (PriceStufftextBox.Text == "")
             {
                 MessageBox.Show("Enter Price");
             }
             else
             {
+                bool check2 = true;
+                string str2 = PriceStufftextBox.Text;
+                for (int i = 0; i < str2.Length; i++)
+                {
+                    if (str2[i] >= 'a' && str2[i] <= 'z' || str2[i] >= 'A' && str2[i] <= 'Z')
+                    {
+                        check2 = false;
+                        break;
+                    }
+                }
 
-
-                if (FromcomboBox.Text == stuffDataAccess.GetDepartureDestinationStuff(Convert.ToInt32(BusIdStuffcomboBox.Text))
+                if(check2 == true  )
+                {
+                    if (FromcomboBox.Text == stuffDataAccess.GetDepartureDestinationStuff(Convert.ToInt32(BusIdStuffcomboBox.Text))
                     && TocomboBox.Text == stuffDataAccess.GetArrivalDestinationStuff(Convert.ToInt32(BusIdStuffcomboBox.Text)))
 
-                {
-                    if (stuffDataAccess.AddTicketStuff(Convert.ToInt32(PriceStufftextBox.Text), Convert.ToInt32(BusIdStuffcomboBox.Text), FromcomboBox.Text,
-                        TocomboBox.Text, TimetextBox.Text, DeparturedateTimePicker.Text, SeatNotextBox.Text,
-                        PassengerNametextBox.Text, ContactNotextBox.Text))
                     {
-                        MessageBox.Show("New Ticket Booked");
-                        ConfirmGridView();
-                        ClearFields();
+                        if (stuffDataAccess.AddTicketStuff(Convert.ToInt32(PriceStufftextBox.Text), Convert.ToInt32(BusIdStuffcomboBox.Text), FromcomboBox.Text,
+                            TocomboBox.Text, TimetextBox.Text, DeparturedateTimePicker.Text, SeatNotextBox.Text,
+                            PassengerNametextBox.Text, ContactNotextBox.Text))
+                        {
+                            MessageBox.Show("New Ticket Booked");
+                            ConfirmGridView();
+                            ClearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error in Booking");
+                            ClearFields();
+
+                        }
+
                     }
                     else
                     {
-                        MessageBox.Show("Error in Booking");
-                        ClearFields();
-
+                        MessageBox.Show("Departure And Arrival Location not Correct");
                     }
-
                 }
-
                 else
                 {
-                    MessageBox.Show("Departure And Arrival Location not Correct");
+                    MessageBox.Show("Price Format Not correct");
                 }
+
+                
             }
         }
 
@@ -166,17 +184,34 @@ namespace BusRapidTransitManagement.Forms
         private void ConfirmCancelbutton_Click(object sender, EventArgs e)
         {
             StuffDataAccess stuffDataAccess = new StuffDataAccess();
-            if (stuffDataAccess.CancelTicketStuff(Convert.ToInt32(CancelTicketIdtextBox.Text)))
+
+            bool check2 = true;
+            string str2 = PriceStufftextBox.Text;
+            for (int i = 0; i < str2.Length; i++)
             {
-                MessageBox.Show("Canceled Ticket");
-                ConfirmGridView();
-                ClearFields();
+                if (str2[i] >= 'a' && str2[i] <= 'z' || str2[i] >= 'A' && str2[i] <= 'Z')
+                {
+                    check2 = false;
+                    break;
+                }
+            }
+            if (check2 == true)
+            {
+                if (stuffDataAccess.CancelTicketStuff(Convert.ToInt32(CancelTicketIdtextBox.Text)))
+                {
+                    MessageBox.Show("Canceled Ticket");
+                    ConfirmGridView();
+                    ClearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Can Not be Canceled");
+                    ClearFields();
+                }
             }
             else
-            {
-                MessageBox.Show("Can Not be Canceled");
-                ClearFields();
-            }
+                MessageBox.Show("Id was not in the right format");
+
         }
 
         private void FromcomboBox_Click(object sender, EventArgs e)

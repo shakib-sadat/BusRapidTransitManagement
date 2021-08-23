@@ -65,6 +65,7 @@ namespace BusRapidTransitManagement.Forms
         private void ManagerInterface_Load(object sender, EventArgs e)
         {
             Login login = new Login();
+            
             HomePage homePage = new HomePage();
             Managerhomepanel.Controls.Clear();
             Managerhomepanel.Controls.Add(homePage);

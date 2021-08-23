@@ -52,8 +52,9 @@ namespace BusRapidTransitManagement.Forms
             // 
             // ManagerUpdateinfobutton
             // 
-            this.ManagerUpdateinfobutton.BackColor = System.Drawing.Color.MediumPurple;
-            this.ManagerUpdateinfobutton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManagerUpdateinfobutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(90)))), ((int)(((byte)(119)))));
+            this.ManagerUpdateinfobutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ManagerUpdateinfobutton.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManagerUpdateinfobutton.Location = new System.Drawing.Point(142, 452);
             this.ManagerUpdateinfobutton.Name = "ManagerUpdateinfobutton";
             this.ManagerUpdateinfobutton.Size = new System.Drawing.Size(122, 40);
@@ -148,7 +149,8 @@ namespace BusRapidTransitManagement.Forms
             // ManagerInfogroupBox
             // 
             this.ManagerInfogroupBox.Controls.Add(this.ManagerinfodataGridView);
-            this.ManagerInfogroupBox.Location = new System.Drawing.Point(597, 98);
+            this.ManagerInfogroupBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManagerInfogroupBox.Location = new System.Drawing.Point(555, 102);
             this.ManagerInfogroupBox.Name = "ManagerInfogroupBox";
             this.ManagerInfogroupBox.Size = new System.Drawing.Size(735, 379);
             this.ManagerInfogroupBox.TabIndex = 25;
@@ -157,8 +159,9 @@ namespace BusRapidTransitManagement.Forms
             // 
             // ManagerinfodataGridView
             // 
+            this.ManagerinfodataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.ManagerinfodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ManagerinfodataGridView.Location = new System.Drawing.Point(16, 32);
+            this.ManagerinfodataGridView.Location = new System.Drawing.Point(16, 58);
             this.ManagerinfodataGridView.Name = "ManagerinfodataGridView";
             this.ManagerinfodataGridView.Size = new System.Drawing.Size(713, 278);
             this.ManagerinfodataGridView.TabIndex = 0;
@@ -218,7 +221,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Thistle;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(59)))));
             this.Controls.Add(this.ManageinfomaleradioButton);
             this.Controls.Add(this.ManagerInfoFemaleradioButton);
             this.Controls.Add(this.ManagerAgeInfotextBox);
@@ -236,7 +239,7 @@ namespace BusRapidTransitManagement.Forms
             this.Controls.Add(this.ManagerPasswordinfolabel);
             this.Controls.Add(this.ManagerNameinfolabel);
             this.Name = "ManagerEditInfo";
-            this.Size = new System.Drawing.Size(1357, 574);
+            this.Size = new System.Drawing.Size(1303, 615);
             this.Load += new System.EventHandler(this.ManagerEditInfo_Load);
             this.ManagerInfogroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ManagerinfodataGridView)).EndInit();

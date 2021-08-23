@@ -31,6 +31,7 @@ namespace BusRapidTransitManagement.Forms
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
             if (managerDataAccess.GetStuffControl() != null)
                 StuffControldataGridView.DataSource = managerDataAccess.GetStuffControl();
+            StuffControldataGridView.Columns[8].Visible = false;
         }
 
         void ClearFields()
@@ -39,9 +40,12 @@ namespace BusRapidTransitManagement.Forms
             AddstuffEmailtextBox.Text = string.Empty;
             AddstuffSalarytextBox.Text = string.Empty;
             AddstuffAgetextBox.Text = string.Empty;
-            AddStuffGendertextBox.Text = string.Empty;
             AddstuffContacttextBox.Text = string.Empty;
+            AddStuffGendertextBox.Text = string.Empty;
             AddstuffShifttextBox.Text = string.Empty;
+            ManageslaryIdtextBox.Text = string.Empty;
+            ManageNewsalarytextBox.Text = string.Empty;
+            RemovestuffIdtextBox.Text = string.Empty;
 
 
         }
@@ -91,17 +95,23 @@ namespace BusRapidTransitManagement.Forms
             {
                 MessageBox.Show("Enter Age");
             }
-            else if (AddStuffGendertextBox.Text == "")
+            else if (AddstuffContacttextBox.Text == "")
             {
+
                 MessageBox.Show("Enter Gender");
+
             }
+            
+            
+           
+
             else if (AddstuffContacttextBox.Text == "")
             {
                 MessageBox.Show("Enter Contact No");
             }
             else 
             {
-                if (managerDataAccess.AddStuff(AddstuffNametextBox.Text, AddstuffEmailtextBox.Text, AddstuffShifttextBox.Text, Convert.ToDouble(AddstuffSalarytextBox.Text), Convert.ToInt32(AddstuffAgetextBox.Text), AddStuffGendertextBox.Text, AddstuffContacttextBox.Text))
+                if (managerDataAccess.AddStuff(AddstuffNametextBox.Text, AddstuffEmailtextBox.Text, AddstuffShifttextBox.Text, Convert.ToDouble(AddstuffSalarytextBox.Text), Convert.ToInt32(AddstuffAgetextBox.Text),AddstuffContacttextBox.Text, AddStuffGendertextBox.Text))
                 {
                     MessageBox.Show("New Stuff Added");
                     AddGridView();

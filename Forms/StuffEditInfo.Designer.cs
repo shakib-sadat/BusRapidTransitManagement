@@ -29,6 +29,7 @@ namespace BusRapidTransitManagement.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.StuffinfomaleradioButton = new System.Windows.Forms.RadioButton();
             this.StuffInfoFemaleradioButton = new System.Windows.Forms.RadioButton();
             this.StuffAgeInfotextBox = new System.Windows.Forms.TextBox();
@@ -142,7 +143,7 @@ namespace BusRapidTransitManagement.Forms
             this.StuffEmailinfolabel.Name = "StuffEmailinfolabel";
             this.StuffEmailinfolabel.Size = new System.Drawing.Size(115, 26);
             this.StuffEmailinfolabel.TabIndex = 35;
-            this.StuffEmailinfolabel.Text = "Stuff Email";
+            this.StuffEmailinfolabel.Text = "Staff Email";
             // 
             // Stuffcontactinfolabel
             // 
@@ -172,7 +173,7 @@ namespace BusRapidTransitManagement.Forms
             this.StuffNameinfolabel.Name = "StuffNameinfolabel";
             this.StuffNameinfolabel.Size = new System.Drawing.Size(119, 26);
             this.StuffNameinfolabel.TabIndex = 32;
-            this.StuffNameinfolabel.Text = "Stuff Name";
+            this.StuffNameinfolabel.Text = "Staff Name";
             // 
             // StuffinfoUpdatebutton
             // 
@@ -192,6 +193,14 @@ namespace BusRapidTransitManagement.Forms
             this.StuffInfodataGridView.AllowUserToAddRows = false;
             this.StuffInfodataGridView.AllowUserToDeleteRows = false;
             this.StuffInfodataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StuffInfodataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.StuffInfodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StuffInfodataGridView.Location = new System.Drawing.Point(6, 27);
             this.StuffInfodataGridView.Name = "StuffInfodataGridView";
@@ -209,7 +218,7 @@ namespace BusRapidTransitManagement.Forms
             this.groupBox1.Size = new System.Drawing.Size(657, 457);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Stuff Information";
+            this.groupBox1.Text = "Staff Information";
             // 
             // StuffEditInfo
             // 

@@ -34,16 +34,28 @@ namespace BusRapidTransitManagement.Forms
             AddBusCapacitytextBox.Text = string.Empty;
             AddBusArrivaltextBox.Text = string.Empty;
             AddBusDeparturetextBox.Text = string.Empty;
-            
+            SearchBustextBox.Text = string.Empty;
+
+
 
 
         }
 
         public void UpdateGridview()
         {
+            int count = 0;
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
             if (managerDataAccess.GetBusesInfo() != null)
-                BusInfodataGridView.DataSource = managerDataAccess.GetBusesInfo();
+            { BusInfodataGridView.DataSource = managerDataAccess.GetBusesInfo(); }
+            else
+                BusInfodataGridView.DataSource = null;
+            for (int i = 0; i < BusInfodataGridView.Rows.Count; i++)
+            {
+                count++;
+            }
+            BusCountManagerlabel.Text = Convert.ToString(count);
+            
+            
         }
 
         private void RemoveBusbutton_Click(object sender, EventArgs e)
@@ -107,7 +119,10 @@ namespace BusRapidTransitManagement.Forms
 
         private void BusInfo_Manager__Load(object sender, EventArgs e)
         {
+            
             UpdateGridview();
+            
+
         }
 
         private void SearchBustextBox_TextChanged(object sender, EventArgs e)

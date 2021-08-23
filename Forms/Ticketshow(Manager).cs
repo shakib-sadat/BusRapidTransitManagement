@@ -32,13 +32,15 @@ namespace BusRapidTransitManagement.Forms
             DepartureManagerdateTimePicker.Text = string.Empty;
             DepartureTimeManagertextBox.Text = string.Empty;
             BusIdcomboBox.Text = string.Empty;
-           
-
+            DepartureManagerdateTimePicker.Text = string.Empty;
+            CancelManagerTicketIdtextBox.Text = string.Empty;
             PricetextBox.Text = string.Empty;
         }
 
         void ConfirmGridView()
         {
+            int count = 0;
+            int busCount = 0;
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
             if (managerDataAccess.GetTicketsInfo() != null)
             {
@@ -57,6 +59,18 @@ namespace BusRapidTransitManagement.Forms
             }
             else
                 BusShowdataGridView.DataSource = null;
+
+            for (int i = 0; i < TicketInfodataGridView.Rows.Count; i++)
+            {
+                count++;
+            }
+            TicketCountManagerlabel.Text = Convert.ToString(count);
+
+            for (int i = 0; i < BusShowdataGridView.Rows.Count; i++)
+            {
+                busCount++;
+            }
+            BusCountlabel.Text = Convert.ToString(busCount);
         }
         private void BookTicketManagerbutton_Click(object sender, EventArgs e)
         {
@@ -200,6 +214,11 @@ namespace BusRapidTransitManagement.Forms
         {
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
             BusIdcomboBox.DataSource = managerDataAccess.ViewBuses();
+        }
+
+        private void PricetextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
