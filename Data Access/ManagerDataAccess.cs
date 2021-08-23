@@ -419,7 +419,16 @@ namespace BusRapidTransitManagement.Data_Access
 
         public bool AddCounters(string location)
         {
-            string sql = "INSERT INTO Counters Destinations VALUES('" + location + "')";
+            string sql = "INSERT INTO Counters (Destination) VALUES('" + location + "')";
+            int result = this.ExecuteQuery(sql);
+            if (result > 0)
+                return true;
+            else
+                return false;
+        }
+        public bool RemoveCounters(string location)
+        {
+            string sql = "DELETE FROM Counters WHERE Destination = '" + location + "'"  ;
             int result = this.ExecuteQuery(sql);
             if (result > 0)
                 return true;

@@ -28,7 +28,7 @@ namespace BusRapidTransitManagement.Forms
         public void UpdateGridView()
         {
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
-            if (managerDataAccess.GetBusesInfo() != null)
+            if (managerDataAccess.GetDestinations() != null)
                 CountersManagerdataGridView.DataSource = managerDataAccess.GetDestinations();
         }
 
@@ -45,6 +45,7 @@ namespace BusRapidTransitManagement.Forms
                 {
                     MessageBox.Show("Counter Added");
                     UpdateGridView();
+                    AddCountertextBox.Text = "";
                 }
                 else { MessageBox.Show("Error in Adding"); }
                     
@@ -66,6 +67,26 @@ namespace BusRapidTransitManagement.Forms
         {
             RemoveCounterpanel.Visible = false;
             AddCounterpanel.Visible = true;
+        }
+
+        private void RemoveCounterbutton_Click(object sender, EventArgs e)
+        {
+            ManagerDataAccess managerDataAccess = new ManagerDataAccess();
+            if(RemoveCountertextBox.Text == "")
+            {
+                MessageBox.Show("Enter a Location");
+            }
+            else
+            {
+                if (managerDataAccess.RemoveCounters(RemoveCountertextBox.Text))
+                {
+                    MessageBox.Show("Counter Removed");
+                    UpdateGridView();
+                    RemoveCountertextBox.Text = "";
+                }
+                else
+                    MessageBox.Show("Falied to Remove Counter");
+            }
         }
     }
 }

@@ -24,11 +24,13 @@ namespace BusRapidTransitManagement.Forms
 
         private void StuffInterface_Load(object sender, EventArgs e)
         {
+            Login login = new Login();
             StuffDataAccess stuffDataAccess = new StuffDataAccess();
             HomePageStuff homePagestuff = new HomePageStuff();
             stuffhomepanel.Controls.Clear();
             stuffhomepanel.Controls.Add(homePagestuff);
-            
+            StuffIdShowlabel.Text = Login.userId;
+
         }
 
         private void Ticketbutton_Click(object sender, EventArgs e)
@@ -49,7 +51,7 @@ namespace BusRapidTransitManagement.Forms
         private void BusInformationbutton_Click(object sender, EventArgs e)
         {
             stuffhomepanel.Controls.Clear();
-            stuffhomepanel.Controls.Add(new BusInfo_stuff_());
+            
         }
 
         private void PassengerInfobutton_Click(object sender, EventArgs e)

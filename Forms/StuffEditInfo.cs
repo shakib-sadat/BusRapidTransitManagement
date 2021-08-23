@@ -116,6 +116,10 @@ namespace BusRapidTransitManagement.Forms
                 ClearFields();
             }
         }
-        
+
+        private void StuffInfodataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

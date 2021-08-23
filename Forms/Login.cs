@@ -13,7 +13,7 @@ namespace BusRapidTransitManagement.Forms
 {
     public partial class Login : Form
     {
-
+        public static string userId;
         public Login()
         {
             InitializeComponent();
@@ -119,7 +119,12 @@ namespace BusRapidTransitManagement.Forms
 
         private void ManagerUsertextBox_TextChanged(object sender, EventArgs e)
         {
+            userId = ManagerUsertextBox.Text;
+        }
 
+        private void StuffUsertextBox_TextChanged(object sender, EventArgs e)
+        {
+            userId = StuffUsertextBox.Text; 
         }
     }
     }

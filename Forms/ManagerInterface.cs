@@ -64,11 +64,12 @@ namespace BusRapidTransitManagement.Forms
 
         private void ManagerInterface_Load(object sender, EventArgs e)
         {
+            Login login = new Login();
             HomePage homePage = new HomePage();
             Managerhomepanel.Controls.Clear();
             Managerhomepanel.Controls.Add(homePage);
             ManagerDataAccess managerDataAccess = new ManagerDataAccess();
-           
+            ManagerIdShowlabel.Text = Login.userId;
             
         }
 
@@ -77,6 +78,11 @@ namespace BusRapidTransitManagement.Forms
             HomePage homePage = new HomePage();
             Managerhomepanel.Controls.Clear();
             Managerhomepanel.Controls.Add(homePage);
+            
+        }
+
+        private void ManagerIdShowlabel_Click(object sender, EventArgs e)
+        {
             
         }
     }

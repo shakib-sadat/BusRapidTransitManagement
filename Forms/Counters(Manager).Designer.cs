@@ -40,8 +40,8 @@ namespace BusRapidTransitManagement.Forms
             this.RemoveCountertextBox = new System.Windows.Forms.TextBox();
             this.RemoveCounterbutton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AddCounterManagerbutton = new System.Windows.Forms.Button();
             this.RemoveCounterManagerbutton = new System.Windows.Forms.Button();
+            this.AddCounterManagerbutton = new System.Windows.Forms.Button();
             this.CountersManagergroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CountersManagerdataGridView)).BeginInit();
             this.AddCounterpanel.SuspendLayout();
@@ -141,6 +141,7 @@ namespace BusRapidTransitManagement.Forms
             this.RemoveCounterbutton.TabIndex = 6;
             this.RemoveCounterbutton.Text = "Remove";
             this.RemoveCounterbutton.UseVisualStyleBackColor = true;
+            this.RemoveCounterbutton.Click += new System.EventHandler(this.RemoveCounterbutton_Click);
             // 
             // panel1
             // 
@@ -152,16 +153,6 @@ namespace BusRapidTransitManagement.Forms
             this.panel1.Size = new System.Drawing.Size(200, 609);
             this.panel1.TabIndex = 6;
             // 
-            // AddCounterManagerbutton
-            // 
-            this.AddCounterManagerbutton.Location = new System.Drawing.Point(47, 160);
-            this.AddCounterManagerbutton.Name = "AddCounterManagerbutton";
-            this.AddCounterManagerbutton.Size = new System.Drawing.Size(96, 33);
-            this.AddCounterManagerbutton.TabIndex = 4;
-            this.AddCounterManagerbutton.Text = "Add Counter";
-            this.AddCounterManagerbutton.UseVisualStyleBackColor = true;
-            this.AddCounterManagerbutton.Click += new System.EventHandler(this.AddCounterManagerbutton_Click);
-            // 
             // RemoveCounterManagerbutton
             // 
             this.RemoveCounterManagerbutton.Location = new System.Drawing.Point(47, 308);
@@ -171,6 +162,16 @@ namespace BusRapidTransitManagement.Forms
             this.RemoveCounterManagerbutton.Text = "Remove Counter";
             this.RemoveCounterManagerbutton.UseVisualStyleBackColor = true;
             this.RemoveCounterManagerbutton.Click += new System.EventHandler(this.RemoveCounterManagerbutton_Click);
+            // 
+            // AddCounterManagerbutton
+            // 
+            this.AddCounterManagerbutton.Location = new System.Drawing.Point(47, 160);
+            this.AddCounterManagerbutton.Name = "AddCounterManagerbutton";
+            this.AddCounterManagerbutton.Size = new System.Drawing.Size(96, 33);
+            this.AddCounterManagerbutton.TabIndex = 4;
+            this.AddCounterManagerbutton.Text = "Add Counter";
+            this.AddCounterManagerbutton.UseVisualStyleBackColor = true;
+            this.AddCounterManagerbutton.Click += new System.EventHandler(this.AddCounterManagerbutton_Click);
             // 
             // Counters_Manager_
             // 

@@ -68,7 +68,7 @@ namespace BusRapidTransitManagement.Forms
         {
             BookTicketManagerpanel.Visible = false ;
             CancelTicketManagerpanel.Visible = true;
-            ClearFields();
+           
         }
 
         private void TicketConfirmManagerbutton_Click(object sender, EventArgs e)

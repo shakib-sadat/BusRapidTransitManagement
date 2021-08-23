@@ -48,8 +48,8 @@ namespace BusRapidTransitManagement.Forms
             this.Stuffbutton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.StuffLoginpanel.SuspendLayout();
             this.ManagerLoginpanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,23 +59,23 @@ namespace BusRapidTransitManagement.Forms
             // 
             // StuffLoginpanel
             // 
-            this.StuffLoginpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(83)))), ((int)(((byte)(151)))));
+            this.StuffLoginpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(83)))), ((int)(((byte)(118)))));
             this.StuffLoginpanel.Controls.Add(this.StuffLoginbutton);
             this.StuffLoginpanel.Controls.Add(this.StuffUsertextBox);
             this.StuffLoginpanel.Controls.Add(this.StuffPasswordtextBox);
             this.StuffLoginpanel.Controls.Add(this.StuffLoginlabel);
             this.StuffLoginpanel.Controls.Add(this.StuffPasswordlabel);
             this.StuffLoginpanel.Controls.Add(this.StuffUserlabel);
-            this.StuffLoginpanel.Location = new System.Drawing.Point(206, 116);
+            this.StuffLoginpanel.Location = new System.Drawing.Point(245, 148);
             this.StuffLoginpanel.Name = "StuffLoginpanel";
-            this.StuffLoginpanel.Size = new System.Drawing.Size(797, 523);
+            this.StuffLoginpanel.Size = new System.Drawing.Size(797, 514);
             this.StuffLoginpanel.TabIndex = 0;
             // 
             // StuffLoginbutton
             // 
             this.StuffLoginbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(137)))), ((int)(((byte)(198)))));
             this.StuffLoginbutton.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StuffLoginbutton.Location = new System.Drawing.Point(265, 339);
+            this.StuffLoginbutton.Location = new System.Drawing.Point(271, 381);
             this.StuffLoginbutton.Name = "StuffLoginbutton";
             this.StuffLoginbutton.Size = new System.Drawing.Size(112, 40);
             this.StuffLoginbutton.TabIndex = 11;
@@ -85,24 +85,27 @@ namespace BusRapidTransitManagement.Forms
             // 
             // StuffUsertextBox
             // 
-            this.StuffUsertextBox.Location = new System.Drawing.Point(277, 85);
+            this.StuffUsertextBox.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffUsertextBox.Location = new System.Drawing.Point(283, 127);
             this.StuffUsertextBox.Name = "StuffUsertextBox";
-            this.StuffUsertextBox.Size = new System.Drawing.Size(141, 20);
+            this.StuffUsertextBox.Size = new System.Drawing.Size(141, 26);
             this.StuffUsertextBox.TabIndex = 7;
+            this.StuffUsertextBox.TextChanged += new System.EventHandler(this.StuffUsertextBox_TextChanged);
             // 
             // StuffPasswordtextBox
             // 
-            this.StuffPasswordtextBox.Location = new System.Drawing.Point(277, 181);
+            this.StuffPasswordtextBox.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StuffPasswordtextBox.Location = new System.Drawing.Point(283, 223);
             this.StuffPasswordtextBox.Name = "StuffPasswordtextBox";
             this.StuffPasswordtextBox.PasswordChar = '*';
-            this.StuffPasswordtextBox.Size = new System.Drawing.Size(141, 20);
+            this.StuffPasswordtextBox.Size = new System.Drawing.Size(141, 26);
             this.StuffPasswordtextBox.TabIndex = 6;
             // 
             // StuffLoginlabel
             // 
             this.StuffLoginlabel.AutoSize = true;
             this.StuffLoginlabel.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StuffLoginlabel.Location = new System.Drawing.Point(311, 15);
+            this.StuffLoginlabel.Location = new System.Drawing.Point(317, 57);
             this.StuffLoginlabel.Name = "StuffLoginlabel";
             this.StuffLoginlabel.Size = new System.Drawing.Size(55, 22);
             this.StuffLoginlabel.TabIndex = 5;
@@ -112,7 +115,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.StuffPasswordlabel.AutoSize = true;
             this.StuffPasswordlabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StuffPasswordlabel.Location = new System.Drawing.Point(123, 181);
+            this.StuffPasswordlabel.Location = new System.Drawing.Point(129, 223);
             this.StuffPasswordlabel.Name = "StuffPasswordlabel";
             this.StuffPasswordlabel.Size = new System.Drawing.Size(94, 26);
             this.StuffPasswordlabel.TabIndex = 3;
@@ -122,7 +125,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.StuffUserlabel.AutoSize = true;
             this.StuffUserlabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StuffUserlabel.Location = new System.Drawing.Point(147, 85);
+            this.StuffUserlabel.Location = new System.Drawing.Point(153, 127);
             this.StuffUserlabel.Name = "StuffUserlabel";
             this.StuffUserlabel.Size = new System.Drawing.Size(33, 26);
             this.StuffUserlabel.TabIndex = 2;
@@ -130,16 +133,16 @@ namespace BusRapidTransitManagement.Forms
             // 
             // ManagerLoginpanel
             // 
-            this.ManagerLoginpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(83)))), ((int)(((byte)(151)))));
+            this.ManagerLoginpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(83)))), ((int)(((byte)(118)))));
             this.ManagerLoginpanel.Controls.Add(this.ManagerLoginbutton);
             this.ManagerLoginpanel.Controls.Add(this.ManagerUsertextBox);
             this.ManagerLoginpanel.Controls.Add(this.ManagerPasswordtextBox);
             this.ManagerLoginpanel.Controls.Add(this.ManagerLoginlabel);
             this.ManagerLoginpanel.Controls.Add(this.ManagerPasswordlabel);
             this.ManagerLoginpanel.Controls.Add(this.ManagerUserlabel);
-            this.ManagerLoginpanel.Location = new System.Drawing.Point(206, 119);
+            this.ManagerLoginpanel.Location = new System.Drawing.Point(245, 148);
             this.ManagerLoginpanel.Name = "ManagerLoginpanel";
-            this.ManagerLoginpanel.Size = new System.Drawing.Size(797, 520);
+            this.ManagerLoginpanel.Size = new System.Drawing.Size(801, 520);
             this.ManagerLoginpanel.TabIndex = 1;
             this.ManagerLoginpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ManagerLoginpanel_Paint);
             // 
@@ -147,7 +150,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.ManagerLoginbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(137)))), ((int)(((byte)(198)))));
             this.ManagerLoginbutton.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManagerLoginbutton.Location = new System.Drawing.Point(287, 332);
+            this.ManagerLoginbutton.Location = new System.Drawing.Point(289, 382);
             this.ManagerLoginbutton.Name = "ManagerLoginbutton";
             this.ManagerLoginbutton.Size = new System.Drawing.Size(107, 40);
             this.ManagerLoginbutton.TabIndex = 10;
@@ -157,25 +160,27 @@ namespace BusRapidTransitManagement.Forms
             // 
             // ManagerUsertextBox
             // 
-            this.ManagerUsertextBox.Location = new System.Drawing.Point(287, 82);
+            this.ManagerUsertextBox.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManagerUsertextBox.Location = new System.Drawing.Point(297, 119);
             this.ManagerUsertextBox.Name = "ManagerUsertextBox";
-            this.ManagerUsertextBox.Size = new System.Drawing.Size(142, 20);
+            this.ManagerUsertextBox.Size = new System.Drawing.Size(128, 26);
             this.ManagerUsertextBox.TabIndex = 9;
             this.ManagerUsertextBox.TextChanged += new System.EventHandler(this.ManagerUsertextBox_TextChanged);
             // 
             // ManagerPasswordtextBox
             // 
-            this.ManagerPasswordtextBox.Location = new System.Drawing.Point(287, 178);
+            this.ManagerPasswordtextBox.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManagerPasswordtextBox.Location = new System.Drawing.Point(297, 215);
             this.ManagerPasswordtextBox.Name = "ManagerPasswordtextBox";
             this.ManagerPasswordtextBox.PasswordChar = '*';
-            this.ManagerPasswordtextBox.Size = new System.Drawing.Size(142, 20);
+            this.ManagerPasswordtextBox.Size = new System.Drawing.Size(128, 26);
             this.ManagerPasswordtextBox.TabIndex = 8;
             // 
             // ManagerLoginlabel
             // 
             this.ManagerLoginlabel.AutoSize = true;
             this.ManagerLoginlabel.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManagerLoginlabel.Location = new System.Drawing.Point(310, 8);
+            this.ManagerLoginlabel.Location = new System.Drawing.Point(312, 58);
             this.ManagerLoginlabel.Name = "ManagerLoginlabel";
             this.ManagerLoginlabel.Size = new System.Drawing.Size(96, 22);
             this.ManagerLoginlabel.TabIndex = 4;
@@ -185,7 +190,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.ManagerPasswordlabel.AutoSize = true;
             this.ManagerPasswordlabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManagerPasswordlabel.Location = new System.Drawing.Point(159, 172);
+            this.ManagerPasswordlabel.Location = new System.Drawing.Point(161, 222);
             this.ManagerPasswordlabel.Name = "ManagerPasswordlabel";
             this.ManagerPasswordlabel.Size = new System.Drawing.Size(94, 26);
             this.ManagerPasswordlabel.TabIndex = 1;
@@ -195,7 +200,7 @@ namespace BusRapidTransitManagement.Forms
             // 
             this.ManagerUserlabel.AutoSize = true;
             this.ManagerUserlabel.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManagerUserlabel.Location = new System.Drawing.Point(170, 82);
+            this.ManagerUserlabel.Location = new System.Drawing.Point(172, 128);
             this.ManagerUserlabel.Name = "ManagerUserlabel";
             this.ManagerUserlabel.Size = new System.Drawing.Size(33, 26);
             this.ManagerUserlabel.TabIndex = 0;
@@ -227,29 +232,39 @@ namespace BusRapidTransitManagement.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(95)))));
             this.panel1.Controls.Add(this.Stuffbutton);
             this.panel1.Controls.Add(this.Managerbutton);
             this.panel1.Location = new System.Drawing.Point(0, 116);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 523);
+            this.panel1.Size = new System.Drawing.Size(200, 593);
             this.panel1.TabIndex = 14;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(5)))), ((int)(((byte)(44)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(95)))));
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1003, 118);
+            this.panel2.Size = new System.Drawing.Size(1119, 118);
             this.panel2.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(75)))), ((int)(((byte)(95)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 118);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
             this.label1.Font = new System.Drawing.Font("Gabriola", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(346, 31);
@@ -258,25 +273,15 @@ namespace BusRapidTransitManagement.Forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Bus Rapid Transit Management";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 118);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(83)))), ((int)(((byte)(151)))));
-            this.ClientSize = new System.Drawing.Size(1003, 640);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(83)))), ((int)(((byte)(118)))));
+            this.ClientSize = new System.Drawing.Size(1119, 707);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ManagerLoginpanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.StuffLoginpanel);
             this.Name = "Login";
             this.Text = "Login";
